@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daisy 的 AI 每日资讯日报</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 50px 40px;
-            max-width: 500px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        h1 { font-size: 2em; color: #2d3748; margin-bottom: 12px; }
-        p { color: #718096; font-size: 1.1em; line-height: 1.8; margin-bottom: 24px; }
-        .latest-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1em;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daisy 的 AI 每日资讯日报</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 100vh; padding: 40px 20px; }
+  .container { max-width: 640px; margin: 0 auto; }
+
+  .hero { text-align: center; padding: 48px 0 40px; }
+  .hero-badge { display: inline-block; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.8); font-size: 12px; padding: 4px 16px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
+  .hero h1 { color: #fff; font-size: 28px; font-weight: 700; margin-bottom: 10px; }
+  .hero p { color: rgba(255,255,255,0.55); font-size: 14px; line-height: 1.8; }
+
+  .latest-card { background: #e94560; border-radius: 16px; padding: 24px 28px; margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; transition: opacity 0.2s; }
+  .latest-card:hover { opacity: 0.9; }
+  .latest-card .left { }
+  .latest-card .tag { font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 6px; letter-spacing: 1px; }
+  .latest-card .title { color: #fff; font-size: 17px; font-weight: 700; }
+  .latest-card .arrow { color: rgba(255,255,255,0.7); font-size: 22px; }
+
+  .section-label { font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 2px; text-transform: uppercase; margin: 28px 0 14px 4px; }
+
+  .archive-list { display: flex; flex-direction: column; gap: 10px; }
+  .archive-item { background: rgba(255,255,255,0.07); border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; transition: background 0.2s; }
+  .archive-item:hover { background: rgba(255,255,255,0.12); }
+  .archive-item .date { color: rgba(255,255,255,0.9); font-size: 14px; font-weight: 600; }
+  .archive-item .lead { color: rgba(255,255,255,0.45); font-size: 12px; margin-top: 3px; }
+  .archive-item .arrow { color: rgba(255,255,255,0.3); font-size: 16px; }
+
+  .footer { text-align: center; padding: 40px 0 20px; color: rgba(255,255,255,0.25); font-size: 12px; }
+</style>
 </head>
 <body>
-    <div class="card">
-        <h1>🤖 AI 每日资讯日报</h1>
-        <p>这里是 Daisy 的专属 AI 资讯日报<br>每天更新，关注音乐娱乐 · AI原生公司 · 互联网大厂动态</p>
-        <a class="latest-link" href="./2026-03-11.html">查看最新一期 →</a>
+<div class="container">
+
+  <div class="hero">
+    <div class="hero-badge">🤖 AI DAILY · WorkBuddy</div>
+    <h1>AI 每日资讯日报</h1>
+    <p>音乐娱乐 · AI原生公司 · 互联网大厂动态<br>每日精选 · HRD 视角思考延展</p>
+  </div>
+
+  <a class="latest-card" href="./2026-03-13.html">
+    <div class="left">
+      <div class="tag">✨ 最新一期</div>
+      <div class="title">2026年3月13日</div>
     </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <div class="section-label">往期回顾</div>
+
+  <div class="archive-list">
+    <a class="archive-item" href="./2026-03-12.html">
+      <div>
+        <div class="date">2026年3月12日</div>
+        <div class="lead">字节腾讯阿里三连发 AI 工具 · Suno 付费用户破200万</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="archive-item" href="./2026-03-11.html">
+      <div>
+        <div class="date">2026年3月11日</div>
+        <div class="lead">Spotify AI DJ · OpenAI组织文化 · 阿里通义负责人离职</div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+
+  <div class="footer">WorkBuddy · 每日为你精选</div>
+
+</div>
 </body>
 </html>
