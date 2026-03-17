@@ -18,9 +18,6 @@
   .stat-label { font-size: 12px; color: #888; margin-top: 2px; }
   .container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
   .section-title { font-size: 13px; font-weight: 700; color: #e94560; letter-spacing: 2px; margin: 32px 0 16px; padding-left: 10px; border-left: 3px solid #e94560; }
-  .source-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; background: #f0f0f0; color: #888; margin-left: 6px; vertical-align: middle; }
-  .source-badge.official { background: #fff0f0; color: #e94560; }
-  .source-badge.media { background: #f0f4ff; color: #3a6bd4; }
   .news-card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
   .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
   .news-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; font-weight: 600; }
@@ -28,10 +25,14 @@
   .tag-product { background: #f0f4ff; color: #3a6bd4; }
   .tag-org { background: #f0fff4; color: #2a9d60; }
   .tag-legal { background: #fff8e6; color: #d48f2a; }
+  .tag-china { background: #f0fff4; color: #0a7c4e; }
   .news-card h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; color: #1d1d1f; }
   .news-card p { font-size: 13px; line-height: 1.8; color: #555; }
   .news-meta { font-size: 11px; color: #aaa; margin-top: 10px; }
   .news-meta a { color: #3a6bd4; text-decoration: none; }
+  .compare-box { background: #f8f9ff; border-radius: 10px; padding: 14px 16px; margin-top: 12px; border-left: 3px solid #3a6bd4; }
+  .compare-box p { font-size: 12px; color: #555; line-height: 1.8; }
+  .compare-box strong { color: #3a6bd4; }
   .think-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 24px; margin-top: 32px; }
   .think-box h2 { color: #fff; font-size: 15px; margin-bottom: 18px; }
   .think-item { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 14px 16px; margin-bottom: 12px; }
@@ -52,7 +53,7 @@
   <h1>AI 每日资讯</h1>
   <div class="subtitle">为 Daisy 精选 · TME 视角</div>
   <div class="lead">
-    今天最值得关注的是：英伟达 GTC 2026 正在圣何塞进行，黄仁勋发布 Vera Rubin 全栈 AI 平台，宣称 2027 年算力芯片营收将达 1 万亿美元；与此同时，Meta 酝酿史上最大裁员（20%，约 1.58 万人），明确以"AI 替代人力"为由——AI 提效与人员缩减的关系，这周在全球科技圈正式摆上台面。
+    今天 AI 产业的东西两场秀同步上演：圣何塞 GTC 大会上，黄仁勋发布 Vera Rubin 平台、宣言 2027 年芯片营收破万亿，押注"云端算力无上限"；上海 AWE 展馆里，国内家电厂商集体喊出"端侧 AI 元年"，把大模型装进冰箱、空调和扫地机器人。一个在卖算力基础设施，一个在卖 AI 落地场景——两场秀讲的是同一个故事的不同章节。
   </div>
 </div>
 
@@ -65,29 +66,33 @@
 <div class="container">
 
   <!-- 议题一 -->
-  <div class="section-title">议题一 · AI 新产品 &amp; 流媒体动态</div>
+  <div class="section-title">议题一 · AI 新产品 &amp; 产业动态</div>
 
   <div class="news-card">
-    <span class="news-tag tag-product">AI 基础设施</span>
-    <h3>英伟达 GTC 2026：Vera Rubin 全栈平台发布，黄仁勋放言 2027 年营收冲万亿</h3>
-    <p>北京时间 3 月 17 日凌晨，黄仁勋在圣何塞 GTC 大会登台，发布 Vera Rubin 全栈 AI 平台——含 88 核 Vera CPU、Rubin GPU、LPU 推理机架等七类芯片协同系统。核心亮点：单 Token 推理成本降至现有 Blackwell 的 1/10，推理吞吐量/功耗比提升 35 倍，支持 100% 液冷无线缆设计。黄仁勋同步宣布，英伟达 AI 芯片业务 2027 年营收目标达 1 万亿美元，较此前预期翻倍，AWS、Azure、Google Cloud 及 OpenAI 已确认首批部署。</p>
-    <p>同场发布的还有 DLSS 5——英伟达将其定义为"图形领域的 GPT 时刻"，首次引入实时神经网络渲染模型，将生成式 AI 与传统渲染融合，2026 年秋季正式推出。</p>
+    <span class="news-tag tag-product">🇺🇸 GTC 2026 · 云端算力</span>
+    <h3>英伟达 Vera Rubin 全栈平台发布：单 Token 成本降至 1/10，黄仁勋放言 2027 年营收冲万亿</h3>
+    <p>北京时间 3 月 17 日凌晨，黄仁勋在圣何塞发布 Vera Rubin 全栈 AI 平台——七类芯片协同（Vera CPU、Rubin GPU、LPU 推理机架等），推理吞吐量/功耗比较 Blackwell 提升 35 倍，单 Token 成本降至 1/10，支持 100% 液冷无线缆。黄仁勋宣布 2027 年 AI 芯片营收目标 1 万亿美元，AWS、Azure、Google Cloud、OpenAI 已确认首批部署。</p>
+    <p>同场发布 DLSS 5，定义为"图形领域的 GPT 时刻"——首次引入实时神经网络渲染，2026 年秋季正式推出。黄仁勋还提出 AI "五层蛋糕"理论：能源→芯片→基础设施→模型→应用，任何上层应用都依赖底层持续投入。</p>
     <div class="news-meta">📅 2026-03-17 &nbsp;|&nbsp; <a href="https://news.sina.cn/bignews/summary/2026-03-17/detail-inhrhavx8215940.d.html" target="_blank">来源：新浪科技</a></div>
   </div>
 
   <div class="news-card">
-    <span class="news-tag tag-music">流媒体 · Spotify</span>
-    <h3>Spotify 在 SXSW 发布 Taste Profile：用户终于可以"亲口教"算法别再推这类歌</h3>
-    <p>Spotify 联合 CEO 古斯塔夫·瑟德斯特伦在 SXSW（3 月 13 日）正式宣布推出 Taste Profile（味觉档案）功能。用户可以查看算法对自己收听习惯的理解摘要，并通过自然语言直接告知 AI"多推什么、少推什么、彻底屏蔽什么"——覆盖音乐、播客、有声书三类内容。目前在新西兰 Premium 用户中公测，未来扩展至美国和加拿大。</p>
-    <p>这是流媒体平台首次将推荐算法的"控制权"直接交还给用户。Spotify 明确表示，此功能的设计目标之一是让用户快速过滤掉平台上泛滥的 AI 生成音乐。</p>
-    <div class="news-meta">📅 2026-03-13 &nbsp;|&nbsp; <a href="https://www.sohu.com/a/997286698_114765" target="_blank">来源：搜狐科技</a></div>
+    <span class="news-tag tag-china">🇨🇳 AWE 2026 · 端侧 AI</span>
+    <h3>上海 AWE 展：国内家电厂商集体押注"端侧 AI 元年"，大模型装进冰箱和扫地机器人</h3>
+    <p>3 月 12 日开幕、本周仍在进行的 AWE 2026（中国家电及消费电子博览会）以"AI 赋能万物"为主题，超 800 家品牌参展。核心叙事与 GTC 截然不同——不是卖算力，而是卖落地：海尔推出全球首套 L4 级智能体家电套系，实现"家务无人化"；格力 AI 空调能感知人体状态自动调节；海信 AI 电视通过摄像头识别观看人数和坐姿，全程免手动。</p>
+    <p>AI 芯片厂商聚思智能在展会现场表示："2026 年是端侧 AI 需求明显升温的元年，未来大模型向端侧迁移将是大趋势。"国内方向是：把云端大模型的推理能力压缩到家电芯片里，让 AI 在本地实时运行，不依赖网络。</p>
+    <div class="compare-box">
+      <p><strong>GTC vs AWE：同一个 AI 时代，两种叙事</strong><br>
+      GTC 讲的是"算力无上限，往云端堆"——英伟达卖的是数据中心基础设施，客户是 AWS、OpenAI 这类大厂；AWE 讲的是"AI 够用就好，往终端压"——国内厂商卖的是消费电子落地，客户是普通家庭。两者不矛盾，但商业逻辑完全不同：前者追求性能天花板，后者追求成本地板。谁先到达"够用又够便宜"的交叉点，谁就赢得了大众市场。</p>
+    </div>
+    <div class="news-meta">📅 2026-03-12 至今 &nbsp;|&nbsp; <a href="https://news.qq.com/rain/a/20260312A07HCG00" target="_blank">来源：腾讯新闻</a></div>
   </div>
 
   <div class="news-card">
     <span class="news-tag tag-music">流媒体 · Apple Music</span>
-    <h3>Apple Music 上线 AI 透明度标签：封面、旋律、歌词、MV——四维度强制披露</h3>
-    <p>Apple Music 于 3 月 5 日向行业合作伙伴发布新规：唱片公司和发行商在上传内容时，须针对专辑封面、音频录制、歌词创作、音乐视频四个维度，主动标注是否使用 AI 生成或 AI 辅助创作。与 Spotify 类似，采用"选择性加入"机制（由权利方手动声明），而非 Deezer 等平台的自动检测方式。</p>
-    <p>此举是流媒体平台对 AI 生成内容规模化涌入的直接回应。当 AI 音乐越来越难以被耳朵分辨，平台开始尝试用"元数据透明度"重建用户信任。</p>
+    <h3>Apple Music 上线 AI 透明度标签：封面、旋律、歌词、MV 四维度强制披露</h3>
+    <p>Apple Music 于 3 月 5 日向行业合作伙伴发布新规：唱片公司和发行商在上传内容时，须针对专辑封面、音频录制、歌词创作、音乐视频四个维度，主动标注是否使用 AI 生成或辅助创作。采用"选择性加入"机制（权利方手动声明），区别于 Deezer 等平台的自动检测方式。</p>
+    <p>这是流媒体平台对 AI 生成内容规模化涌入的直接回应——当 AI 音乐越来越难被耳朵辨别，平台开始用"元数据透明度"重建用户信任。</p>
     <div class="news-meta">📅 2026-03-05 &nbsp;|&nbsp; <a href="https://www.sohu.com/a/992669368_114984" target="_blank">来源：搜狐科技</a></div>
   </div>
 
@@ -97,16 +102,15 @@
   <div class="news-card">
     <span class="news-tag tag-org">组织变化 · Meta</span>
     <h3>Meta 酝酿史上最大裁员：约 1.58 万人，"AI 替代人力"首次成为官方逻辑</h3>
-    <p>据路透社（3 月 13–14 日）援引三位知情人士报道，Meta 正计划启动比例达 20% 的裁员，涉及约 1.58 万个岗位——超过 2023 年"效率之年"两轮裁员的总和。高管已要求各团队开始制定精简方案，具体时间和规模尚未最终敲定。Meta 发言人称"这些报道只是猜测"，但并未否认。</p>
-    <p>此次裁员的公开逻辑与以往不同：过去裁员通常以"业务调整"为由，而这次高层明确表示，目的是"为 AI 辅助员工带来的效率提升铺路"，并对冲 2028 年前高达 6000 亿美元的 AI 资本支出。内容审核、营销、行政后台岗位首当其冲。</p>
+    <p>据路透社（3 月 13–14 日）援引三位知情人士报道，Meta 正计划启动比例达 20% 的裁员，涉及约 1.58 万个岗位。高管已要求各团队制定精简方案，具体时间和规模尚未敲定。此次最值得关注的不是规模，而是叙事：高层明确表示裁员目的是"为 AI 辅助员工带来的效率提升铺路"，并对冲 2028 年前高达 6000 亿美元的 AI 资本支出——这是大型科技公司第一次将"AI 替代人力"写进官方裁员逻辑。</p>
     <div class="news-meta">📅 2026-03-14 &nbsp;|&nbsp; <a href="https://www.sohu.com/a/996820386_100085330" target="_blank">来源：搜狐财经</a></div>
   </div>
 
   <div class="news-card">
     <span class="news-tag tag-org">组织变化 · Atlassian</span>
-    <h3>Jira 母公司 Atlassian 裁员 1600 人（10%）：CTO 同步离职，技术岗受冲击最深</h3>
-    <p>协同软件巨头 Atlassian 宣布裁减 1600 个岗位，其中技术岗超 900 人，北美 640 人、澳大利亚 480 人、印度 250 人受影响，公司 CTO Rajeev 亦在此轮离任。CEO 在内部备忘录中表示"AI 正在重塑技能需求"，但否认是 AI 直接替代，实际方向是将资源转向 AI 产品开发和企业级销售。</p>
-    <p>赔偿方案：16 周薪资 + 医疗延期 + 1000 美元"技术补贴"。这是科技行业近期 AI 转型裁员中，"技术一号位（CTO）本人都未能幸免"的罕见案例。</p>
+    <h3>Jira 母公司 Atlassian 裁员 1600 人（10%）：CTO 同步离任，技术岗受冲击最深</h3>
+    <p>协同软件巨头 Atlassian 宣布裁减 1600 个岗位，技术岗超 900 人（北美 640、澳大利亚 480、印度 250），公司 CTO Rajeev 亦在此轮离任。CEO 称"AI 正在重塑技能需求"，实际方向是将资源转向 AI 产品开发和企业级销售。赔偿方案：16 周薪资 + 医疗延期 + 1000 美元"技术补贴"。</p>
+    <p>这是科技行业近期 AI 转型裁员中，"技术一号位本人都未能幸免"的罕见案例。</p>
     <div class="news-meta">📅 2026-03-12 &nbsp;|&nbsp; <a href="https://www.huxiu.com/article/4842587.html" target="_blank">来源：虎嗅</a></div>
   </div>
 
@@ -115,20 +119,20 @@
     <h2>💡 思考延展 · HRD 视角</h2>
 
     <div class="think-item">
-      <h4>💬 观点一：Meta 裁员的信号意义，远大于裁员本身</h4>
-      <p>这次 Meta 裁员真正值得关注的，不是规模（1.58 万人），而是叙事框架的变化：这是大型科技公司第一次将"AI 替代人力"作为正式的、公开的裁员理由写进高管沟通中。过去的裁员总要找一个"业务调整"或"宏观环境"的借口来遮掩，这次 Meta 没有。这意味着，这套逻辑一旦被社会接受，将成为其他公司效仿的模板。</p>
-      <p>🎯 <strong>对你的启发：</strong>TME 的员工已经在问"AI 会不会替代我"——这不是杞人忧天，而是有全球真实案例在背书。HRD 如何在这个节点给员工一个有说服力的答案？不是安抚，而是真实的能力转型路径。这件事拖不得，因为每一次类似 Meta 的新闻出来，员工的焦虑都会叠加一层。</p>
+      <h4>💬 观点一：Meta 裁员叙事的变化，比裁员本身更值得警惕</h4>
+      <p>这次 Meta 裁员真正值得关注的，是叙事框架的升级：这是大型科技公司第一次将"AI 替代人力"作为正式的、公开的裁员理由写进高管沟通。过去裁员总要找"业务调整"或"宏观环境"的借口，这次 Meta 没有。这意味着，一旦这套逻辑被社会正常化，其他公司效仿时阻力会小得多。</p>
+      <p>🎯 <strong>对你的启发：</strong>TME 的员工已经在问"AI 会不会替代我"——现在有了全球真实案例背书，焦虑只会叠加。HRD 能给的答案不是安抚，而是一条真实可见的能力转型路径。这件事有时间窗口，等得越久，员工越难被说服。</p>
     </div>
 
     <div class="think-item">
-      <h4>💬 观点二：Spotify Taste Profile 的背后，是"用户控制权"成为产品竞争力</h4>
-      <p>Taste Profile 最有趣的地方，不是技术本身，而是它代表了一种产品哲学的转变：从"算法替你决定"到"算法透明、你来主导"。Spotify 推这个功能，直接动机是用户对 AI 生成音乐泛滥的不满——当平台内容质量失控，重建信任的方式不是过滤，而是把控制权还给用户。苹果的 AI 透明度标签同理。</p>
-      <p>🎯 <strong>对你的启发：</strong>这个逻辑可以平移到企业培训场景里。当 AI 辅助设计课程、AI 推送学习内容越来越普遍，员工和管理者对"AI 怎么给我推这个"同样会产生不信任感。TME 的培训体系未来如果引入 AI 个性化学习，"透明度"和"用户可干预"应该成为设计原则之一，而不是把算法当黑箱。</p>
+      <h4>💬 观点二：GTC vs AWE，折射出 AI 落地的两种路径——哪条与 TME 更相关？</h4>
+      <p>英伟达 GTC 和国内 AWE 同日进行，代表 AI 产业的两个极端：一个押注"算力越大越好"，一个押注"够用就好、装进终端"。对 TME 而言，更相关的其实是 AWE 的逻辑——音乐 App 不需要数据中心级推理，需要的是在手机/耳机/智能音箱上实时运行、低延迟、低能耗的端侧模型。国内家电厂商正在解决的"大模型端侧化"，正是音乐流媒体个性化推荐、实时混音、离线 AI 的技术前提。</p>
+      <p>🎯 <strong>对你的启发：</strong>在设计"AI 融入培训"的课程时，区分"云端 AI 工具"和"端侧 AI 能力"是有价值的维度。员工日常用的 AI 多数跑在端侧或轻量级推理上，理解这个差异，能帮助培训内容更贴近实际工作场景，而不是总在讲 GPT-4 级别的大模型。</p>
     </div>
 
     <div class="think-item">
       <h4>🤔 每日思考题</h4>
-      <p>Meta 宣布以"AI 提效"为由启动史上最大裁员，Atlassian 的 CTO 也在转型中离任。假设 TME 今年的 AI 工具推进顺利，三年后某些岗位的人效真的提升了 50%——作为 HRD，你会主动向管理层提出"优化编制"的建议，还是等对方来找你谈？这是一道没有标准答案的题，但你对这个问题的回答，决定了你在 AI 时代里是主动参与者还是被动执行者。</p>
+      <p>GTC 的黄仁勋和 AWE 的国内厂商，分别代表了"技术供给侧"和"应用落地侧"的 AI 叙事。TME 的培训体系，目前更接近哪一侧——是在讲"AI 能做什么大事"，还是在讲"AI 怎么用在你的日常工作里"？如果两者都没讲清楚，员工的 AI 焦虑从哪里来，又该从哪里化解？</p>
     </div>
   </div>
 
