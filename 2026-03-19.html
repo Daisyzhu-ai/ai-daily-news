@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日资讯 · 2026年3月19日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 24px 32px; text-align: center; }
+  .header-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+  .header h1 { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .header .subtitle { color: rgba(255,255,255,0.6); font-size: 14px; }
+  .header .lead { color: rgba(255,255,255,0.9); font-size: 15px; margin-top: 18px; background: rgba(255,255,255,0.08); border-left: 3px solid #e94560; padding: 12px 16px; border-radius: 0 8px 8px 0; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .stats-bar { background: #fff; display: flex; justify-content: center; gap: 40px; padding: 18px; border-bottom: 1px solid #e5e5e5; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #e94560; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 2px; }
+  .container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
+  .section-title { font-size: 13px; font-weight: 700; color: #e94560; letter-spacing: 2px; margin: 32px 0 16px; padding-left: 10px; border-left: 3px solid #e94560; }
+  .news-card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .news-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; font-weight: 600; }
+  .tag-music { background: #fff0f3; color: #e94560; }
+  .tag-product { background: #f0f4ff; color: #3a6bd4; }
+  .tag-org { background: #f0fff4; color: #2a9d60; }
+  .tag-legal { background: #fff8e6; color: #d48f2a; }
+  .tag-china { background: #f0fff4; color: #0a7c4e; }
+  .tag-auto { background: #f5f0ff; color: #7c3aed; }
+  .tag-warn { background: #fff3e0; color: #e65100; }
+  .news-card h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; color: #1d1d1f; }
+  .news-card p { font-size: 13px; line-height: 1.8; color: #555; }
+  .news-meta { font-size: 12px; color: #aaa; margin-top: 10px; }
+  .news-meta a { color: #3a6bd4; text-decoration: none; }
+  .news-meta a:hover { text-decoration: underline; }
+  .highlight-box { background: #fffbf0; border: 1px solid #ffd700; border-radius: 10px; padding: 14px 18px; margin: 10px 0; }
+  .highlight-box p { font-size: 13px; line-height: 1.8; color: #555; }
+  .highlight-box strong { color: #b8860b; }
+  .think-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; color: #fff; }
+  .think-box .think-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-bottom: 10px; }
+  .think-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+  .think-box p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.8); }
+  .think-box .highlight { color: #ffd700; font-weight: 600; }
+  .question-box { background: linear-gradient(135deg, #e94560, #c0392b); border-radius: 12px; padding: 20px 24px; color: #fff; margin-top: 8px; }
+  .question-box .q-label { font-size: 11px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 8px; }
+  .question-box p { font-size: 14px; line-height: 1.7; font-weight: 500; }
+  .friday-box { background: linear-gradient(135deg, #0f3460, #1a1a2e); border: 1px solid #ffd700; border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; color: #fff; }
+  .friday-box .f-label { font-size: 11px; color: #ffd700; letter-spacing: 2px; margin-bottom: 12px; }
+  .friday-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 14px; color: #fff; }
+  .friday-box .option { background: rgba(255,255,255,0.07); border-radius: 8px; padding: 12px 14px; margin-bottom: 10px; }
+  .friday-box .option-title { font-size: 13px; font-weight: 700; color: #ffd700; margin-bottom: 4px; }
+  .friday-box .option-desc { font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.7; }
+  .friday-box .cta { font-size: 13px; color: rgba(255,255,255,0.8); margin-top: 14px; line-height: 1.7; }
+  .footer { text-align: center; padding: 30px 16px; color: #aaa; font-size: 12px; }
+  .footer a { color: #3a6bd4; text-decoration: none; }
+  .back-btn { position: fixed; bottom: 24px; right: 24px; background: #e94560; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 24px; text-decoration: none; box-shadow: 0 4px 12px rgba(233,69,96,0.4); z-index: 999; }
+  .back-btn:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">WorkBuddy · AI 每日资讯</div>
+  <h1>2026年3月19日 · 星期四</h1>
+  <div class="subtitle">过去24小时 · 精选 AI 动态</div>
+  <div class="lead">
+    今日关键词是<strong style="color:#ffd700">「自主」</strong>：小米一天内连发三款大模型 + SU7 正式亮相，把"全栈 AI 自研"摆上桌面；Anthropic 让 Claude 直接操作你的电脑；谷歌 AI Overview 已让小型内容网站两年内流失 60% 流量 —— <strong style="color:#ffd700">AI 正在从"辅助工具"变成"自主行动者"，而这对内容行业的冲击，只是刚刚开始。</strong>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">小米今日发布大模型数</div></div>
+  <div class="stat"><div class="stat-num">160亿</div><div class="stat-label">小米今年 AI 投入</div></div>
+  <div class="stat"><div class="stat-num">-60%</div><div class="stat-label">小型内容网站两年流量跌幅</div></div>
+</div>
+
+<div class="container">
+
+  <!-- 议题一 -->
+  <div class="section-title">议题一 · 产品动态：AI 自主能力跃迁</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">产品发布</span>
+    <h3>小米一天双连发：SU7 正式上市 + 万亿参数大模型 MiMo-V2-Pro 全球第八</h3>
+    <p>3月19日，小米完成了"硬件 × 模型"的同步亮相。上午发布三款自研大模型，晚 7 点新一代 SU7 正式上市。雷军表示"我们在 AI 领域相对低调，实际进展可能比大家看到的要快很多"，并宣布今年 AI 研发和资本投入将超过 160 亿元。</p>
+    <div class="highlight-box">
+      <p><strong>大模型三件套：</strong><br>
+      · <strong>MiMo-V2-Pro</strong>：旗舰基座，1T 总参数（42B 激活），1M 超长上下文，专为 Agent 高强度工作场景设计；Artificial Analysis 排行榜全球第八、国内第二，超越 xAI Grok<br>
+      · <strong>MiMo-V2-Omni</strong>：全模态基座，原生融合文本 + 视觉 + 音频，打通感知到执行完整链路<br>
+      · <strong>MiMo-V2-TTS</strong>：语音合成，为 Agent 赋予"有温度、有情感"的声音，补齐全栈最后一环</p>
+    </div>
+    <p>SU7 方面：预售价 22.99 万起，全系标配 XLA 认知大模型 + 激光雷达 + 索尔芯片（700 TOPS），华为、比亚迪、奔驰等十余家车企集体发文祝贺——罕见的竞争对手背书。</p>
+    <div class="news-meta">来源：<a href="https://finance.sina.com.cn/tech/roll/2026-03-19/doc-inhrmyei9037075.shtml" target="_blank">新浪财经</a> · <a href="https://news.qq.com/rain/a/20260319A02TFI00" target="_blank">腾讯新闻</a> · 2026-03-19</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">AI Agent</span>
+    <h3>Anthropic 发布 Dispatch：手机下指令，Claude 自动帮你操作电脑</h3>
+    <p>3月17日，Claude Cowork 上线新功能 Dispatch。操作极简：更新 Mac 上的 Claude 桌面版 → 扫描 QR 码与手机配对 → 此后你在手机说一句话，Claude 会在 Mac 上自动点击、打字、执行任务，你不需要在场。</p>
+    <div class="highlight-box">
+      <p><strong>能做什么：</strong><br>
+      · 整理文件夹、生成表格、跑完一个完整流程<br>
+      · 可通过"连接器"和 Chrome 插件与其他 App 协同<br>
+      · 目前仅支持 macOS；Claude Pro（$20/月）订阅即可使用<br>
+      · <strong>本质</strong>：Claude 从"聊天框助手"升级为"桌面自主员工"</p>
+    </div>
+    <div class="news-meta">来源：<a href="https://36kr.com/p/3728350022089609" target="_blank">36氪</a> · <a href="https://new.qq.com/rain/a/20260319A02SVX00" target="_blank">腾讯新闻</a> · 2026-03-19</div>
+  </div>
+
+  <!-- 议题二 -->
+  <div class="section-title">议题二 · 行业警示：内容平台的 AI 流量危机</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-warn">行业警示</span>
+    <h3>谷歌 AI Overview 两年内让小型内容网站流失 60% 推荐流量</h3>
+    <p>3月19日，科技媒体 Axios 发布 Chartbeat 数据报告：自谷歌 AI Overview（AI 摘要直答）功能推出以来，小型内容发布商（日均浏览量 1000~10000）受冲击最严重，两年内流失 <strong>60%</strong> 的谷歌推荐流量；中型发布商流失 47%；大型发布商（日均 10 万+）也下跌 22%。</p>
+    <div class="highlight-box">
+      <p><strong>逻辑很简单：</strong>用户问谷歌一个问题，AI 在搜索结果顶部直接给出答案 → 用户不需要点进网站 → 网站流量消失。<br><br>
+      <strong>受波及的内容类型：</strong>资讯聚合、评测文章、问答类博客、音乐/娱乐资讯类网站 —— 这些恰好是内容行业的基础流量来源。</p>
+    </div>
+    <p>这不只是搜索行业的问题：任何依赖"被搜索发现"来获取用户的内容平台，都面临同样的结构性威胁。</p>
+    <div class="news-meta">来源：<a href="https://finance.sina.com.cn/tech/digi/2026-03-19/doc-inhrnqzs4207762.shtml" target="_blank">新浪科技</a> · 2026-03-19</div>
+  </div>
+
+  <!-- 思考延展 -->
+  <div class="section-title">思考延展 · HRD 视角</div>
+
+  <div class="think-box">
+    <div class="think-label">PERSPECTIVE 01</div>
+    <h3>小米今天做的事，说明"全栈 AI 自研"的门槛已经降下来了</h3>
+    <p>一家手机公司，一天之内发布三款大模型 + 一台 AI 驾驶汽车，全栈自研，并拿下全球排行榜第八。这在两年前是不可想象的。<span class="highlight">当技术门槛快速下降，竞争优势就从"有没有 AI"变成了"AI 用得多快、整合得多深"。</span>对 TME 的启示是：AI 能力的自研 vs 采购不再是二选一，而是要问——你在哪个环节有不可替代的数据或场景，值得深度整合？版权数据、用户行为、音乐人生态，这些才是 TME 真正的护城河，AI 是工具，不是护城河本身。</p>
+  </div>
+
+  <div class="think-box">
+    <div class="think-label">PERSPECTIVE 02</div>
+    <h3>谷歌 AI Overview 的流量危机，是内容行业的"沸水青蛙"时刻</h3>
+    <p>60% 的流量消失，不是一夜之间发生的，是两年内慢慢蚕食的。<span class="highlight">这正是 AI 对内容行业最危险的方式：不是颠覆，而是侵蚀。</span>对 TME 这样的音乐内容平台，搜索流量可能不是主要入口，但"被动发现"的逻辑是一样的——如果 AI 助手能直接告诉用户"这首歌你应该听"，用户还需要主动打开 QQ 音乐搜索吗？这是 Daisy 在培训 AI 工具选型时值得提醒业务侧的认知：不要只看 AI 帮你做了什么，也要看 AI 在外部悄悄拿走了什么。</p>
+  </div>
+
+  <div class="question-box">
+    <div class="q-label">每日一问 · DAILY QUESTION</div>
+    <p>Claude Dispatch 让 AI 自主操作电脑完成任务，不需要人在场监督。如果这个能力普及到企业内部 —— <strong>培训管理者的哪些日常工作会首先被"Dispatch 掉"？剩下的工作，核心价值是什么？</strong></p>
+  </div>
+
+  <!-- 周五深度研究话题确认 -->
+  <div class="section-title">📅 周五深度研究 · 话题确认</div>
+
+  <div class="friday-box">
+    <div class="f-label">⚠️ 周四约定 · 请 Daisy 确认明日方向</div>
+    <h3>明天（3月20日）是周五，以下是 3 个候选深度研究话题，请选一个 👇</h3>
+
+    <div class="option">
+      <div class="option-title">选项 A · AI Agent 正在重塑哪些岗位？——从 Claude Dispatch 到小米全栈，看"自主执行"的边界</div>
+      <div class="option-desc">从本周 Anthropic Dispatch、小米 MiMo-V2-Pro Agent 模式切入，梳理 AI Agent 在内容/科技公司中真实替代了哪些工作节点，以及 TME 哪些岗位面临"被 Dispatch"的风险。HRD 视角强相关。</div>
+    </div>
+
+    <div class="option">
+      <div class="option-title">选项 B · 内容平台的 AI 流量危机：谷歌 AI Overview 之后，谁会是下一个受害者？</div>
+      <div class="option-desc">以 Axios/Chartbeat 报告为起点，深挖"AI 直答"对音乐/娱乐内容平台的潜在冲击路径，分析 TME、网易云、抖音音乐如何在 AI 搜索时代重构"用户发现"逻辑。业务侧强相关。</div>
+    </div>
+
+    <div class="option">
+      <div class="option-title">选项 C · 小米 160 亿 AI 投入背后：中国科技公司 AI 自研的真实进度与格局</div>
+      <div class="option-desc">以小米今日双连发为切入点，横向对比腾讯、字节、百度、阿里、华为的 AI 自研策略与进展，找出 TME 所在的腾讯系在 AI 能力建设上的相对位置和机会窗口。战略视角。</div>
+    </div>
+
+    <div class="cta">💬 请回复 A、B 或 C，我明天按你的选择撰写深度研究。如果有其他方向也欢迎告诉我～</div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>WorkBuddy · AI 每日资讯 · 2026年3月19日</p>
+  <p style="margin-top:6px;">在线版：<a href="https://daisyzhu-ai.github.io/ai-daily-news/2026-03-19.html" target="_blank">daisyzhu-ai.github.io/ai-daily-news</a></p>
+  <p style="margin-top:8px;"><a href="index.html">← 返回目录</a></p>
+</div>
+
+<a class="back-btn" href="index.html">← 返回目录</a>
+
+</body>
+</html>
