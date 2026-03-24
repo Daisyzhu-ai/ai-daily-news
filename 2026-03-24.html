@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日资讯 · 2026年3月24日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 24px 32px; text-align: center; }
+  .header-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+  .header h1 { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .header .subtitle { color: rgba(255,255,255,0.6); font-size: 14px; }
+  .header .lead { color: rgba(255,255,255,0.9); font-size: 15px; margin-top: 18px; background: rgba(255,255,255,0.08); border-left: 3px solid #e94560; padding: 12px 16px; border-radius: 0 8px 8px 0; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .stats-bar { background: #fff; display: flex; justify-content: center; gap: 40px; padding: 18px; border-bottom: 1px solid #e5e5e5; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #e94560; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 2px; }
+  .container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
+  .section-title { font-size: 13px; font-weight: 700; color: #e94560; letter-spacing: 2px; margin: 32px 0 16px; padding-left: 10px; border-left: 3px solid #e94560; }
+  .news-card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .news-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; font-weight: 600; }
+  .tag-music { background: #fff0f3; color: #e94560; }
+  .tag-product { background: #f0f4ff; color: #3a6bd4; }
+  .tag-org { background: #f0fff4; color: #2a9d60; }
+  .tag-legal { background: #fff8e6; color: #d48f2a; }
+  .tag-china { background: #f0fff4; color: #0a7c4e; }
+  .tag-agent { background: #f5f0ff; color: #7c3aed; }
+  .tag-warn { background: #fff3e0; color: #e65100; }
+  .news-card h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; color: #1d1d1f; }
+  .news-card p { font-size: 13px; line-height: 1.8; color: #555; }
+  .news-meta { font-size: 12px; color: #aaa; margin-top: 10px; }
+  .news-meta a { color: #3a6bd4; text-decoration: none; }
+  .news-meta a:hover { text-decoration: underline; }
+  .highlight-box { background: #fffbf0; border: 1px solid #ffd700; border-radius: 10px; padding: 14px 18px; margin: 10px 0; }
+  .highlight-box p { font-size: 13px; line-height: 1.8; color: #555; }
+  .highlight-box strong { color: #b8860b; }
+  .think-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; color: #fff; }
+  .think-box .think-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-bottom: 10px; }
+  .think-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+  .think-box p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.8); }
+  .think-box .highlight { color: #ffd700; font-weight: 600; }
+  .question-box { background: linear-gradient(135deg, #e94560, #c0392b); border-radius: 12px; padding: 20px 24px; color: #fff; margin-top: 8px; }
+  .question-box .q-label { font-size: 11px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 8px; }
+  .question-box p { font-size: 14px; line-height: 1.7; font-weight: 500; }
+  .footer { text-align: center; padding: 30px 16px; color: #aaa; font-size: 12px; line-height: 2; }
+  .footer a { color: #3a6bd4; text-decoration: none; }
+  .back-btn { position: fixed; bottom: 24px; right: 24px; background: #e94560; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 24px; text-decoration: none; box-shadow: 0 4px 12px rgba(233,69,96,0.4); z-index: 999; }
+  .back-btn:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">WorkBuddy · AI 每日资讯</div>
+  <h1>2026年3月24日 · 星期二</h1>
+  <div class="subtitle">过去48小时 · 精选 AI 动态</div>
+  <div class="lead">
+    今日关键词是<strong style="color:#ffd700">「碾压」</strong>：中国 AI 大模型 Token 调用量连续碾压美国，苹果宣布 Siri 接入 Gemini、WWDC 以"AI重大进展"为核心，三大 AI 巨头72小时同时攻入桌面端 —— <strong style="color:#ffd700">AI 的战场已经从"谁的模型更强"转移到"谁先占领用户的日常入口"，而这场入口争夺战，将直接改写内容行业的流量逻辑。</strong>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">7.36万亿</div><div class="stat-label">中国本周AI Token调用量</div></div>
+  <div class="stat"><div class="stat-num">2.95万亿</div><div class="stat-label">美国本周AI Token调用量</div></div>
+  <div class="stat"><div class="stat-num">250亿</div><div class="stat-label">OpenAI年化营收（美元）</div></div>
+</div>
+
+<div class="container">
+
+  <!-- 议题一 -->
+  <div class="section-title">议题一 · 产品动态：AI 入口争夺白热化</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">产品动态</span>
+    <h3>苹果官宣 WWDC 2026：Siri 将接入 Gemini，首次以"AI重大进展"为核心主题</h3>
+    <p>苹果宣布第37届 WWDC 将于6月8日至12日举办，并披露已与 Google 达成技术协议，允许 Siri 调用 Gemini 模型算力与算法。这是苹果首次承认在核心助手层面引入外部 AI 模型，意味着 Apple Intelligence 的"自研路线"出现重大转向。</p>
+    <div class="highlight-box">
+      <p><strong>为什么重要：</strong>苹果有18亿台活跃设备，Siri 接入 Gemini 后，Google AI 将直接触达这一庞大用户群。对内容行业的影响是：未来用户在 iPhone 上问"推荐一首歌"，决策链条里多了 AI 这一层 —— 音乐平台的流量入口逻辑将被进一步重写。</p>
+    </div>
+    <div class="news-meta">来源：<a href="https://k.sina.com.cn/article_5952915720_162d2490806703jnzk.html?from=tech" target="_blank">新浪新闻 · 3月24日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">桌面端争夺</span>
+    <h3>OpenAI、谷歌、Anthropic 72小时同时攻入桌面端：AI 超级 App 时代开启</h3>
+    <p>OpenAI 将 ChatGPT、Codex 与 Atlas 浏览器强制整合为桌面超级 App，并收购 Python 工具链 Astral；谷歌秘密内测代号"Janus"的 Gemini Mac 客户端；Anthropic 两个月内三连发桌面产品。三家在同一时间窗口内将 AI 从网页端推进到操作系统级别的入口争夺。</p>
+    <div class="highlight-box">
+      <p><strong>信号解读：</strong>浏览器/桌面 App 是用户每天停留时间最长的数字空间，谁占领了这里，谁就掌握了内容分发的前置决策权。对音乐、视频等内容平台而言，<strong>AI 超级 App 可能成为比算法推荐更强力的"内容过滤器"</strong>。</p>
+    </div>
+    <div class="news-meta">来源：<a href="https://www.thepaper.cn/newsDetail_forward_32809788" target="_blank">澎湃新闻 · 3月下旬</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-china">国产大模型</span>
+    <h3>中国 AI Token 调用量连续碾压美国：MiniMax M2.5 五周霸榜全球冠军</h3>
+    <p>3月16日至22日，中国 AI 大模型周调用量达 7.36 万亿 Token，美国仅 2.95 万亿，差距持续扩大。MiniMax M2.5 连续五周霸榜全球调用量冠军，全球前三名全部由国产模型包揽。同日，阿里达摩院发布玄铁 C950 芯片，单核性能刷新全球 RISC-V 纪录，首次原生支持 DeepSeek V3 等千亿参数大模型。</p>
+    <div class="news-meta">来源：<a href="https://finance.sina.com.cn/jjxw/2026-03-24/doc-inhrzysz3518860.shtml" target="_blank">新浪财经 · 3月24日</a> ｜ <a href="https://finance.ifeng.com/c/8rkbT8JzFff" target="_blank">凤凰网财经 · 3月24日</a></div>
+  </div>
+
+  <!-- 议题二 -->
+  <div class="section-title">议题二 · 组织动态：裁员与扩招并行，幸存者更累</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">人才动向</span>
+    <h3>全球科技裁员5.5万人，AI 同期新增130万岗位：幸存者 burnout 速度反而更快</h3>
+    <p>截至3月中旬，全球171起裁员事件致逾5.5万人失业，其中20%明确归因 AI 替代。但 LinkedIn 数据显示，AI 两年来全球新增130万岗位，AI 工程师连续两年蝉联美国最热门职业。伯克利研究揭示一个反常识现象：<strong>留下来的人 burnout 速度反而比被裁的人更快</strong>，因为他们在用更少的人完成更多的工作。</p>
+    <div class="highlight-box">
+      <p><strong>数据背后：</strong>Meta 计划裁撤非核心部门约1.6万人，同期2026年 AI 资本支出高达1150-1350亿美元；OpenAI 计划年底前将员工从4500人扩至8000人。"裁员"与"扩招"同时发生，但针对的是完全不同的岗位类型。</p>
+    </div>
+    <div class="news-meta">来源：<a href="https://www.toutiao.com/article/7619868908652102163/" target="_blank">今日头条 · 3月中旬</a> ｜ <a href="https://k.sina.com.cn/article_5953189932_162d6782c06703z0l4.html" target="_blank">新浪新闻 · 3月14日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-agent">AI Agent</span>
+    <h3>大厂扎堆"养龙虾"：字节腾讯阿里智谱月之暗面同日入局 AI 智能体大战</h3>
+    <p>字节推出 ArkClaw、腾讯上线 WorkBuddy、阿里发布 CoPaw、智谱推出 AutoClaw、月之暗面升级 KimiClaw，五家大厂同日发布基于 OpenClaw 框架的 AI Agent 产品。但首批用户已开始出现两极分化：重度用户深度依赖，轻度用户花钱卸载。AI Agent 的"杀手级场景"争夺战正式打响。</p>
+    <div class="news-meta">来源：<a href="http://finance.china.com.cn/industry/20260324/6299987.shtml" target="_blank">中国网财经 · 3月24日</a></div>
+  </div>
+
+  <!-- 思考延展 -->
+  <div class="section-title">思考延展 · HRD 视角</div>
+
+  <div class="think-box">
+    <div class="think-label">INSIGHT 01</div>
+    <h3>苹果接入 Gemini：内容平台失去"用户第一触点"的速度比想象中快</h3>
+    <p>当 Siri 变得足够聪明，用户会把"找内容"这件事直接交给 AI 助手处理，而不再主动打开 TME、抖音、B站。<span class="highlight">这意味着"推荐算法"这一内容平台的核心竞争力，正在被 AI 入口层的决策权所替代。</span>流量逻辑变了，内容运营的岗位价值也必然随之重新排序。</p>
+    <p style="margin-top:10px;">对 Daisy 的启发：TME 内部的内容运营培训，是否还在围绕"如何做好算法推荐页运营"？<span class="highlight">如果用户获取音乐内容的入口正在从"平台 App"迁移到"AI 助手"，那未来真正有价值的内容岗位，是能与 AI 协作做内容策划的人，而不是执行推送任务的人。</span>现在就可以开始讨论这个岗位重定义。</p>
+  </div>
+
+  <div class="think-box">
+    <div class="think-label">INSIGHT 02</div>
+    <h3>"幸存者 burnout 更快"：AI 转型中最容易被忽视的组织风险</h3>
+    <p>伯克利的研究数据非常值得警惕：当公司用 AI 提效后裁减人员，留下来的人要承接走掉的人的工作量，同时还要学会用 AI 工具 —— <span class="highlight">双重压力叠加，精力透支速度远超被裁者。这是一种"隐性的组织健康危机"，在财务报表上不可见，但会在6-12个月后以关键人才离职的形式爆发。</span></p>
+    <p style="margin-top:10px;">对 Daisy 的启发：TME 在推进 AI 工具落地时，HR 需要同步建立"组织健康监测机制"。<span class="highlight">具体可做的事：在绩效考核引入 AI 协作指标的同时，同步追踪骨干员工的工作饱和度数据，把"防止幸存者 burnout"作为 AI 转型配套方案的一部分，主动向新 HR 负责人提出这个议题。</span>这正是"底层价值"层面的 HR 战略贡献。</p>
+  </div>
+
+  <!-- 每日一问 -->
+  <div class="section-title">每日一问</div>
+
+  <div class="question-box">
+    <div class="q-label">❓ TME HRD 一号位视角</div>
+    <p>当 AI 入口（Siri/豆包/千问）开始替代平台 App 成为用户获取音乐内容的第一触点，TME 内容运营团队的核心竞争力会从"平台运营能力"变成什么？这个转变，应该由业务部门自己摸索，还是 HR 提前介入、主动定义新的岗位能力模型？</p>
+  </div>
+
+  <div class="footer">
+    在线版：<a href="https://daisyzhu-ai.github.io/ai-daily-news/2026-03-24.html" target="_blank">https://daisyzhu-ai.github.io/ai-daily-news/2026-03-24.html</a><br>
+    <a href="index.html">← 返回目录</a> ｜ WorkBuddy · 每日为你精选
+  </div>
+
+</div>
+
+<a class="back-btn" href="index.html">← 返回目录</a>
+
+</body>
+</html>
