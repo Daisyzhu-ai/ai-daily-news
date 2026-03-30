@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日资讯 · 2026年3月30日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 24px 32px; text-align: center; }
+  .header-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+  .header h1 { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .header .subtitle { color: rgba(255,255,255,0.6); font-size: 14px; }
+  .header .lead { color: rgba(255,255,255,0.9); font-size: 15px; margin-top: 18px; background: rgba(255,255,255,0.08); border-left: 3px solid #e94560; padding: 12px 16px; border-radius: 0 8px 8px 0; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .stats-bar { background: #fff; display: flex; justify-content: center; gap: 40px; padding: 18px; border-bottom: 1px solid #e5e5e5; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #e94560; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 2px; }
+  .container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
+  .section-title { font-size: 13px; font-weight: 700; color: #e94560; letter-spacing: 2px; margin: 32px 0 16px; padding-left: 10px; border-left: 3px solid #e94560; }
+  .news-card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .news-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; font-weight: 600; }
+  .tag-music { background: #fff0f3; color: #e94560; }
+  .tag-product { background: #f0f4ff; color: #3a6bd4; }
+  .tag-org { background: #f0fff4; color: #2a9d60; }
+  .tag-legal { background: #fff8e6; color: #d48f2a; }
+  .tag-china { background: #f0fff4; color: #0a7c4e; }
+  .tag-agent { background: #f5f0ff; color: #7c3aed; }
+  .tag-intl { background: #e8f4ff; color: #0070c9; }
+  .tag-robot { background: #fef3ff; color: #9b27af; }
+  .news-card h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; color: #1d1d1f; }
+  .news-card p { font-size: 13px; line-height: 1.8; color: #555; }
+  .news-meta { font-size: 12px; color: #aaa; margin-top: 10px; }
+  .news-meta a { color: #3a6bd4; text-decoration: none; }
+  .news-meta a:hover { text-decoration: underline; }
+  .highlight-box { background: #fffbf0; border: 1px solid #ffd700; border-radius: 10px; padding: 14px 18px; margin: 10px 0; }
+  .highlight-box p { font-size: 13px; line-height: 1.8; color: #555; }
+  .highlight-box strong { color: #b8860b; }
+  .think-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; color: #fff; }
+  .think-box .think-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-bottom: 10px; }
+  .think-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+  .think-box p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.8); }
+  .think-box .highlight { color: #ffd700; font-weight: 600; }
+  .question-box { background: linear-gradient(135deg, #e94560, #c0392b); border-radius: 12px; padding: 20px 24px; color: #fff; margin-top: 8px; }
+  .question-box .q-label { font-size: 11px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 8px; }
+  .question-box p { font-size: 14px; line-height: 1.7; font-weight: 500; }
+  .footer { text-align: center; padding: 30px 16px; color: #aaa; font-size: 12px; line-height: 2; }
+  .footer a { color: #3a6bd4; text-decoration: none; }
+  .back-btn { position: fixed; bottom: 24px; right: 24px; background: #e94560; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 24px; text-decoration: none; box-shadow: 0 4px 12px rgba(233,69,96,0.4); z-index: 999; }
+  .back-btn:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">WorkBuddy · AI 每日资讯</div>
+  <h1>2026年3月30日 · 星期一</h1>
+  <div class="subtitle">过去72小时（含周末）· 精选 AI 动态</div>
+  <div class="lead">
+    今日关键词是<strong style="color:#ffd700">「竞速」</strong>：Anthropic 与 OpenAI 同时备战 IPO、字节+腾讯合计扩招1.7万 AI 人才、机器人融资一天内多家同步宣布 ——
+    <strong style="color:#ffd700">AI 行业正在从"探索期"集体切换到"规模化竞速期"，速度本身就是护城河。</strong>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">600亿+</div><div class="stat-label">Anthropic拟IPO融资规模（美元）</div></div>
+  <div class="stat"><div class="stat-num">1.7万</div><div class="stat-num-sub"></div><div class="stat-label">字节+腾讯合计AI扩招人数</div></div>
+  <div class="stat"><div class="stat-num">200亿+</div><div class="stat-label">2026年机器人领域融资规模（元）</div></div>
+</div>
+
+<div class="container">
+
+  <!-- 议题一 -->
+  <div class="section-title">议题一 · 大模型与产品：多模态加速，搜索形态重写</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">大模型</span>
+    <h3>谷歌 Gemini 2.5 Pro 登顶 LMArena：首次引入思维链推理，支持百万 Token 上下文</h3>
+    <p>谷歌于3月25日正式发布 Gemini 2.5 系列，周末期间行业解读持续发酵。Gemini 2.5 Pro 首次引入思维链推理能力，支持百万 Token 上下文窗口，在 LMArena 排行榜以显著优势登顶，谷歌 DeepMind CTO 称其为"迄今最智能 AI 模型"，并计划将上下文进一步扩大至200万 Token。这是谷歌重新夺回大模型领先地位的最有力信号。</p>
+    <div class="news-meta">来源：<a href="https://new.qq.com/" target="_blank">腾讯新闻 · 3月29日</a> ｜ <a href="https://www.sohu.com/" target="_blank">搜狐科技 · 3月28日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">大模型</span>
+    <h3>字节豆包大模型2.0：Pro/Lite/Mini三档+Code专项，全面参战中国大模型价格战</h3>
+    <p>字节跳动豆包大模型2.0正式发布，包含面向不同场景的 Pro、Lite、Mini 三款通用 Agent 模型及专项 Code 模型，多模态能力全面升级，推理成本大幅降低，继续参与国内大模型价格竞争。豆包 App 月活已达3.15亿，字节在消费级 AI 应用领域的领先优势持续扩大。</p>
+    <div class="news-meta">来源：<a href="https://new.qq.com/" target="_blank">腾讯新闻 · 3月</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">开源模型</span>
+    <h3>阿里 Qwen2.5-Omni-7B 开源一周，全模态小模型引发开发者社区热议</h3>
+    <p>阿里3月27日开源的 Qwen2.5-Omni-7B 在开发者社区持续发酵，7B 参数下实现文本/图像/音频/视频全模态处理，让中小团队以极低成本部署全模态能力。多位开发者测试显示，在音频理解和图文混合推理场景表现尤为突出，被认为是当前开源生态中实用性最强的全模态小模型之一。</p>
+    <div class="news-meta">来源：<a href="https://www.toutiao.com/" target="_blank">今日头条 · 3月28日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-china">国内动态</span>
+    <h3>DeepSeek 已被超200家企业落地，接入特斯拉中国车机，推理成本仅同类1/30</h3>
+    <p>最新数据显示，DeepSeek 已有超200家企业基于其开发垂直解决方案，覆盖法律文书、医疗报告、金融分析等高价值场景，并已接入特斯拉中国区车机系统。DeepSeek 推理成本仅为同类模型的1/30，这一成本优势正在驱动大量原本使用 GPT-4 的企业加速切换。</p>
+    <div class="news-meta">来源：<a href="https://new.qq.com/" target="_blank">腾讯新闻行业报告 · 3月</a></div>
+  </div>
+
+  <!-- 议题二 -->
+  <div class="section-title">议题二 · 资本与组织：IPO 竞速，人才大战，机器人爆发</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-intl">资本动态</span>
+    <h3>Anthropic 拟最快Q4 IPO、融资超600亿美元；OpenAI 押注抢先上市，估值预期1万亿</h3>
+    <p>Anthropic 已与高盛、摩根大通、摩根士丹利等顶级投行接触，计划最早今年四季度启动 IPO，融资规模或超600亿美元，现估值3800亿美元，年化收入140亿美元。OpenAI CEO Sam Altman 表示希望抢在 Anthropic 之前完成上市，预计估值达1万亿美元。两家公司将演绎 AI 行业史上最受关注的双雄上市竞速。</p>
+    <div class="news-meta">来源：<a href="https://finance.sina.com.cn/" target="_blank">新浪财经 · 3月27日</a> ｜ <a href="https://finance.eastmoney.com/" target="_blank">东方财富网 · 3月27日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">人才争夺</span>
+    <h3>字节+腾讯同日启动2026校招，合计扩招超1.7万 AI 技术人才</h3>
+    <p>字节跳动与腾讯同日宣布2026届校园招聘启动，均以 AI 研发为核心方向。字节研发类 Offer 超4800个，创历史新高；腾讯重点招募大模型算法、Agent 工程、AI Infra 方向人才，合计扩招规模超1.7万人。两家大厂在 AI 人才争夺上的正面碰撞，将进一步抬高全行业 AI 岗位薪酬预期。</p>
+    <div class="highlight-box">
+      <p><strong>对 TME HR 的信号：</strong>集团级大规模 AI 扩招意味着内部 AI 岗位评级体系和薪酬 benchmark 都将面临上调压力。<strong>HR 需要在下一轮薪酬调研中重点关注 AI 相关岗位的市场变化，避免被动应对人才流失。</strong></p>
+    </div>
+    <div class="news-meta">来源：<a href="https://new.qq.com/" target="_blank">腾讯新闻 · 3月6日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-robot">具身智能</span>
+    <h3>机器人融资"井喷日"：深度机智、知行机器人、汉阳科技同日宣布融资，行业进入商业化加速期</h3>
+    <p>3月27日，多家具身智能企业同日宣布融资：深度机智（PhysBrain 1.0发布方）在2026年开年三个月内完成3轮融资，合计数亿元；知行机器人完成 B+ 及 B++ 两轮累计近亿元；智能庭院机器人企业汉阳科技（Yarbo）完成近2亿元融资。工信部数据显示，2026年截至3月27日，机器人领域融资规模已超200亿元。</p>
+    <div class="news-meta">来源：<a href="https://finance.sina.com.cn/" target="_blank">新浪财经 · 3月27日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-music">音乐 × AI</span>
+    <h3>Suno 与华纳达成和解：用授权目录替换训练数据，AI 音乐进入"合规训练"新阶段</h3>
+    <p>AI 音乐生成平台 Suno 与华纳音乐就版权训练数据问题达成和解协议，Suno 同意2026年将使用仅基于华纳授权目录训练的新模型替换现有版本；作为和解条件，免费用户将失去下载功能。环球音乐和索尼音乐对 Suno 的诉讼仍在进行中。这标志着 AI 音乐训练数据的"版权围栏"正在加速收紧。</p>
+    <div class="highlight-box">
+      <p><strong>对 TME 的意义：</strong>国际主要平台的版权合规走向，将直接影响国内 AI 音乐工具（如 TME Studio）的训练数据策略。<strong>版权合规能力未来将成为 AI 音乐平台最重要的竞争壁垒之一。</strong></p>
+    </div>
+    <div class="news-meta">来源：<a href="https://new.qq.com/" target="_blank">腾讯新闻 · 3月21日</a></div>
+  </div>
+
+  <!-- 思考延展 -->
+  <div class="section-title">思考延展 · HRD 视角</div>
+
+  <div class="think-box">
+    <div class="think-label">INSIGHT 01</div>
+    <h3>大厂 AI 扩招潮背后：HR 需要提前绘制"AI 人才地图"</h3>
+    <p>字节+腾讯合计1.7万 AI 人才的扩招，加上阿里、百度的同步发力，意味着<span class="highlight">未来12个月 AI 相关岗位将成为全行业竞争最激烈的人才战场。</span></p>
+    <p style="margin-top:10px;">对 Daisy 的启发：TME 作为腾讯子公司，在集团大规模扩招的背景下，既有机会吸引集团内部 AI 人才流动，也面临被其他大厂"虹吸"的风险。<span class="highlight">现在是绘制 TME"AI 人才地图"的时机——哪些 AI 岗位是 TME 未来必须自建的，哪些可以靠集团赋能，这个问题需要在招聘季之前想清楚。</span></p>
+  </div>
+
+  <div class="think-box">
+    <div class="think-label">INSIGHT 02</div>
+    <h3>Suno 版权和解的 HR 启示：合规能力是一种"组织竞争力"</h3>
+    <p>Suno 的版权危机本质上是"技术跑得太快，合规跟不上"的典型案例。<span class="highlight">在 AI 应用场景快速扩展的当下，公司内部对 AI 工具使用的"合规边界"往往是模糊的——员工不知道什么可以用，什么不能用，出了问题才意识到风险。</span></p>
+    <p style="margin-top:10px;">对 Daisy 的启发：TME 在 AI 音乐创作工具（TME Studio 等）的推广过程中，<span class="highlight">HR 可以主导建立一套"AI 使用合规手册"，覆盖版权风险、数据使用规范、AI 生成内容披露标准等，成为员工和业务团队的"AI 合规顾问"——这是 HR 在 AI 时代创造新价值的具体路径之一。</span></p>
+  </div>
+
+  <!-- 每日一问 -->
+  <div class="section-title">每日一问</div>
+
+  <div class="question-box">
+    <div class="q-label">❓ TME HRD 一号位视角</div>
+    <p>大厂 AI 扩招、机器人融资井喷、AI IPO 竞速——这些信号共同指向一个问题：AI 行业进入规模化阶段后，人才需求从"精英探索"转向"规模执行"。作为 TME 的 HRD，你认为 TME 的 AI 人才策略应该走"精英小队"路线，还是"广泛培育"路线？</p>
+  </div>
+
+  <div class="footer">
+    在线版：<a href="https://daisyzhu-ai.github.io/ai-daily-news/2026-03-30.html" target="_blank">https://daisyzhu-ai.github.io/ai-daily-news/2026-03-30.html</a><br>
+    <a href="index.html">← 返回目录</a> ｜ WorkBuddy · 每日为你精选
+  </div>
+
+</div>
+
+<a class="back-btn" href="index.html">← 返回目录</a>
+
+</body>
+</html>
