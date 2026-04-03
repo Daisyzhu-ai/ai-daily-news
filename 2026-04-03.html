@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日资讯 · 2026年4月3日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); padding: 40px 24px 32px; text-align: center; }
+  .header-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #fff; font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 1px; }
+  .header h1 { color: #fff; font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .header .subtitle { color: rgba(255,255,255,0.6); font-size: 14px; }
+  .header .lead { color: rgba(255,255,255,0.9); font-size: 15px; margin-top: 18px; background: rgba(255,255,255,0.08); border-left: 3px solid #e94560; padding: 12px 16px; border-radius: 0 8px 8px 0; text-align: left; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+  .stats-bar { background: #fff; display: flex; justify-content: center; gap: 40px; padding: 18px; border-bottom: 1px solid #e5e5e5; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 22px; font-weight: 700; color: #e94560; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 2px; }
+  .container { max-width: 780px; margin: 0 auto; padding: 24px 16px; }
+  .section-title { font-size: 13px; font-weight: 700; color: #e94560; letter-spacing: 2px; margin: 32px 0 16px; padding-left: 10px; border-left: 3px solid #e94560; }
+  .news-card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .news-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .news-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; font-weight: 600; }
+  .tag-music { background: #fff0f3; color: #e94560; }
+  .tag-product { background: #f0f4ff; color: #3a6bd4; }
+  .tag-org { background: #f0fff4; color: #2a9d60; }
+  .tag-legal { background: #fff8e6; color: #d48f2a; }
+  .tag-china { background: #f0fff4; color: #0a7c4e; }
+  .tag-agent { background: #f5f0ff; color: #7c3aed; }
+  .tag-intl { background: #e8f4ff; color: #0070c9; }
+  .news-card h3 { font-size: 15px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; color: #1d1d1f; }
+  .news-card p { font-size: 13px; line-height: 1.8; color: #555; }
+  .news-meta { font-size: 12px; color: #aaa; margin-top: 10px; }
+  .news-meta a { color: #3a6bd4; text-decoration: none; }
+  .news-meta a:hover { text-decoration: underline; }
+  .highlight-box { background: #fffbf0; border: 1px solid #ffd700; border-radius: 10px; padding: 14px 18px; margin: 10px 0; }
+  .highlight-box p { font-size: 13px; line-height: 1.8; color: #555; }
+  .highlight-box strong { color: #b8860b; }
+  .think-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 22px 24px; margin-bottom: 14px; color: #fff; }
+  .think-box .think-label { font-size: 11px; color: rgba(255,255,255,0.5); letter-spacing: 2px; margin-bottom: 10px; }
+  .think-box h3 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+  .think-box p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.8); }
+  .think-box .highlight { color: #ffd700; font-weight: 600; }
+  .question-box { background: linear-gradient(135deg, #e94560, #c0392b); border-radius: 12px; padding: 20px 24px; color: #fff; margin-top: 8px; }
+  .question-box .q-label { font-size: 11px; letter-spacing: 2px; opacity: 0.8; margin-bottom: 8px; }
+  .question-box p { font-size: 14px; line-height: 1.7; font-weight: 500; }
+  /* 深度研究模块 */
+  .deep-section { background: linear-gradient(135deg, #0d1117, #1a1a2e); border-radius: 16px; padding: 28px 28px; margin-top: 32px; }
+  .deep-badge { display: inline-block; background: #ffd700; color: #1a1a2e; font-size: 11px; font-weight: 800; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; letter-spacing: 1px; }
+  .deep-section h2 { color: #fff; font-size: 18px; font-weight: 700; margin-bottom: 8px; line-height: 1.5; }
+  .deep-section .deep-sub { color: rgba(255,255,255,0.5); font-size: 13px; margin-bottom: 24px; }
+  .deep-block { background: rgba(255,255,255,0.06); border-radius: 10px; padding: 18px 20px; margin-bottom: 14px; }
+  .deep-block h4 { color: #ffd700; font-size: 13px; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px; }
+  .deep-block p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.8; }
+  .deep-block ul { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.8; padding-left: 18px; }
+  .deep-block ul li { margin-bottom: 6px; }
+  .deep-timeline { border-left: 2px solid #e94560; padding-left: 16px; }
+  .deep-timeline .tl-item { margin-bottom: 14px; }
+  .deep-timeline .tl-date { color: #e94560; font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+  .deep-timeline .tl-text { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.7; }
+  .deep-questions { background: rgba(233,69,96,0.15); border: 1px solid rgba(233,69,96,0.3); border-radius: 10px; padding: 18px 20px; }
+  .deep-questions h4 { color: #e94560; font-size: 13px; font-weight: 700; margin-bottom: 12px; }
+  .deep-q-item { margin-bottom: 14px; }
+  .deep-q-item .q-num { color: #ffd700; font-weight: 700; font-size: 13px; }
+  .deep-q-item p { color: rgba(255,255,255,0.8); font-size: 13px; line-height: 1.7; margin-top: 4px; }
+  .footer { text-align: center; padding: 30px 16px; color: #aaa; font-size: 12px; line-height: 2; }
+  .footer a { color: #3a6bd4; text-decoration: none; }
+  .back-btn { position: fixed; bottom: 24px; right: 24px; background: #e94560; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 24px; text-decoration: none; box-shadow: 0 4px 12px rgba(233,69,96,0.4); z-index: 999; }
+  .back-btn:hover { opacity: 0.9; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">WorkBuddy · AI 每日资讯</div>
+  <h1>2026年4月3日 · 星期五</h1>
+  <div class="subtitle">过去48小时 · 精选 AI 动态 · 含周五深度研究</div>
+  <div class="lead">
+    今日关键词是<strong style="color:#ffd700">「龙虾」</strong>：开源智能体 OpenClaw 在中国引发全民养虾热潮，各大厂争相赞助卡位，腾讯云推出企业版 ClawPro ——
+    <strong style="color:#ffd700">与此同时，三大厂同步宣布压缩职级、推进扁平化，AI 重塑的不只是产品，正在重塑每一家大公司的组织结构本身。</strong>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">30亿</div><div class="stat-label">UMG诉Anthropic索赔金额（美元）</div></div>
+  <div class="stat"><div class="stat-num">3家</div><div class="stat-label">腾讯/字节/阿里同步启动职级扁平化</div></div>
+  <div class="stat"><div class="stat-num">10分钟</div><div class="stat-label">腾讯ClawPro企业全员AI部署时间</div></div>
+</div>
+
+<div class="container">
+
+  <!-- 议题一 -->
+  <div class="section-title">议题一 · 产品动态：龙虾席卷中国，大模型密集发布</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-agent">AI Agent</span>
+    <h3>OpenClaw"龙虾"全民养虾：字节、百度、腾讯相继赞助，深圳出台"龙虾十条"</h3>
+    <p>开源智能体 OpenClaw（俗称"龙虾"）本周在中国市场持续升温，字节火山引擎4月2日赞助并建立 ClawHub 中国镜像站；百度、腾讯、腾讯云也相继出现在官网赞助商名单。深圳龙岗区推出"龙虾十条"政策，最高补贴200万元鼓励开发 AI 技能包，将 Agent 生态竞争从产品层拉升至政策层。</p>
+    <div class="highlight-box">
+      <p><strong>对 TME 的意义：</strong>网易云已率先接入 OpenClaw，开放音乐服务接口。各大厂争相赞助意味着 OpenClaw 正在成为 Agent 时代的"安卓"——<strong>谁先占据 Agent 生态入口，谁就掌握下一代用户分发权。TME 是否有对应的 Agent 开放策略值得高度关注。</strong></p>
+    </div>
+    <div class="news-meta">来源：<a href="https://finance.eastmoney.com/" target="_blank">东方财富 · 4月2日</a> ｜ <a href="https://www.sohu.com/" target="_blank">搜狐科技 · 4月2日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">企业AI</span>
+    <h3>腾讯云推出 ClawPro：10分钟完成企业全员 AI 助手部署，国内首个 Agent 企业管控平台</h3>
+    <p>腾讯云4月3日正式发布 ClawPro 并开启公测，企业管理员可统一部署 OpenClaw 模板、下发模型资源配额并实时监测，最快10分钟完成全员专属 AI 助手落地，无需复杂技术团队。这是国内首个基于百万级用户验证的一站式企业 AI 智能体管控平台，直接对标企业级 Agent 管理需求空白。</p>
+    <div class="news-meta">来源：<a href="https://finance.sina.com.cn/" target="_blank">新浪财经 · 4月3日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-product">大模型</span>
+    <h3>谷歌发布 Gemma 4 开源系列：专为 Agent 设计，端侧可在手机和树莓派运行</h3>
+    <p>4月3日，谷歌发布 Gemma 4 系列，涵盖 E2B/E4B 端侧模型及26B MoE、31B 稠密模型，Apache 2.0 协议免费商用。端侧版本已与 Pixel、高通、联发科合作，可在手机和 Raspberry Pi 离线运行，延迟接近零；26B MoE 推理时仅激活38亿参数，性能与速度兼顾。31B 稠密版在开源榜单位列第三。</p>
+    <div class="news-meta">来源：<a href="https://www.toutiao.com/" target="_blank">今日头条 · 4月3日</a> ｜ <a href="https://new.qq.com/" target="_blank">腾讯网 · 4月3日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-china">国内动态</span>
+    <h3>腾讯混元 HY 3.0 本月发布，系姚顺雨入职后首作；DeepSeek V4 有望同月亮相</h3>
+    <p>腾讯在近期媒体沟通会确认，混元 HY 3.0 正处于内部业务测试阶段，4月正式对外发布，由首席 AI 科学家姚顺雨主导，腾讯内部评价"提升力度最大"。与此同时，DeepSeek V4 也被曝本月发布，核心升级聚焦长期记忆增强和多模态能力，采用 INT8 量化技术降低显存占用，延续高性价比开源路线。4月或将成为国内大模型的密集发布月。</p>
+    <div class="news-meta">来源：<a href="https://tech.sina.com.cn/" target="_blank">新浪科技 · 4月初</a> ｜ <a href="https://new.qq.com/" target="_blank">腾讯财经 · 4月2日</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-music">音乐 × 技术</span>
+    <h3>TME 发布 TME CONNECT 无线高保真直传技术：QQ 音乐率先上线，国内首个母带级无线无损</h3>
+    <p>4月2日，腾讯音乐正式向合作伙伴发布 TME CONNECT 无线高保真音频直传技术，在 QQ 音乐首发上线，实现母带级品质无线无损直传，打破无线传输下的音质瓶颈。酷狗、酷我平台后续跟进。这是国内在线音乐流媒体首次实现这一技术突破，进一步巩固 TME 在高品质音频赛道的护城河。</p>
+    <div class="news-meta">来源：<a href="https://www.ithome.com/" target="_blank">IT之家 · 4月2日</a></div>
+  </div>
+
+  <!-- 议题二 -->
+  <div class="section-title">议题二 · 组织动态：三大厂同步扁平化，顶级人才加速出走</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">组织变革</span>
+    <h3>晚点独家：腾讯、字节、阿里同步调整职级体系，推进组织扁平化</h3>
+    <p>《晚点 LatePost》独家报道，腾讯、抖音集团、淘天集团均准备系统性调整职级体系。腾讯将缩减干部层级、推行"能上能下能动"机制，为年轻员工创造空间；字节则为因组织调整被动离职员工提供最长6个月、每月最高1.2万元过渡补贴（最高总价值7.2万元）。三家大厂几乎同时推进扁平化，被认为是 AI 削减管理层的集体响应。</p>
+    <div class="highlight-box">
+      <p><strong>对 TME HR 的直接影响：</strong>集团级扁平化传导到子公司是必然的。<strong>HR 现在需要提前思考：职级压缩后，原有晋升通道如何重设？管理层减少后，L/M 类岗位如何转型？这些问题等业务部门提出来再响应就太晚了。</strong></p>
+    </div>
+    <div class="news-meta">来源：<a href="https://www.latepost.com/" target="_blank">晚点 LatePost · 近期</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">人才流动</span>
+    <h3>华为盘古大模型负责人王云鹤离职，或投身 Agent 创业；xAI 11位联创同步出走</h3>
+    <p>华为诺亚方舟实验室主任、盘古大模型负责人王云鹤（90后）3月28日宣布离职，据报道将投身 AI Agent 领域创业。这是继阿里通义千问负责人林俊旸（3月4日离职）之后，又一国内大厂顶级大模型负责人出走。与此同时，马斯克旗下 xAI 全部11位联合创始人也陆续宣布离职，顶层 AI 人才向创业赛道流动已成2026年明显趋势。</p>
+    <div class="news-meta">来源：<a href="https://new.qq.com/" target="_blank">腾讯网 · 3月28日</a> ｜ <a href="https://www.sohu.com/" target="_blank">搜狐新闻 · 近期</a></div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">人才政策</span>
+    <h3>字节发布 AI 工具费用 Copay 报销政策：员工探索竞品 AI 工具，公司报销50%</h3>
+    <p>字节跳动近日向全员发布内部信，员工使用具有学习研究价值的 AI 软件、API/Token 及硬件产品，公司报销50%。产品/技术序列上限1000美元/年，其他序列上限300美元/年。此举既支持员工研究竞品，也是字节将 AI 工作流普及到全员的战略动作。</p>
+    <div class="highlight-box">
+      <p><strong>对 TME HR 的启示：</strong>字节的做法是把"AI 工具使用"纳入公司福利体系，降低员工试错成本，同时传递"我们支持你用 AI"的文化信号。<strong>这比行政命令要求使用 AI 工具更聪明——TME 是否可以参考设计类似机制？</strong></p>
+    </div>
+    <div class="news-meta">来源：<a href="https://tech.sina.com.cn/" target="_blank">蓝鲸科技 · 近期</a></div>
+  </div>
+
+  <!-- 思考延展 -->
+  <div class="section-title">思考延展 · HRD 视角</div>
+
+  <div class="think-box">
+    <div class="think-label">INSIGHT 01</div>
+    <h3>三大厂同步扁平化：这不是巧合，是 AI 时代组织进化的必然节奏</h3>
+    <p>腾讯、字节、阿里几乎同时推进职级压缩，背后逻辑一致：<span class="highlight">当 AI 工具可以承担大量协调、汇报、监督类工作，中间管理层的存在价值被重新审视。扁平化不是裁员，是把"管理资源"释放出来，让公司更快响应 AI 时代的产品迭代节奏。</span></p>
+    <p style="margin-top:10px;">对 Daisy 的启发：TME 的组织扁平化方向已基本确定，HR 的机会在于<span class="highlight">主动设计"去层级化"后的职业发展替代方案——当晋升通道收窄，员工的成长激励靠什么驱动？横向能力扩展、项目制发展、AI 能力认证……这些都需要 HR 先于业务部门设计好答案。</span></p>
+  </div>
+
+  <div class="think-box">
+    <div class="think-label">INSIGHT 02</div>
+    <h3>字节"AI工具报销50%"是一个聪明的文化设计，而不只是福利</h3>
+    <p>字节的 Copay 政策表面是补贴，实质是在传递一个组织信号：<span class="highlight">公司鼓励你主动探索 AI，愿意和你共担成本。这比"强制使用某工具"的行政推进效率高得多，因为它把探索 AI 的动力从"被要求"变成了"我自己想试"。</span></p>
+    <p style="margin-top:10px;">对 Daisy 的启发：TME 在推广 AI 培训工具时，<span class="highlight">可以参考这个逻辑——与其设计一个"所有人必须完成的 AI 课程"，不如设计一个"AI 探索基金"机制：员工自主选择工具、场景、用法，公司提供一定额度支持，并要求反馈使用心得。这样既能推广 AI，又能收集真实的员工 AI 使用洞察，为下一步培训需求分析提供素材。</span></p>
+  </div>
+
+  <!-- 每日一问 -->
+  <div class="section-title">每日一问</div>
+
+  <div class="question-box">
+    <div class="q-label">❓ TME HRD 一号位视角</div>
+    <p>三大厂同步扁平化，职级层级收窄是大势所趋。当晋升机会减少，员工的"成长感"从哪里来？作为 TME 的 HRD，你认为在 AI 时代，"职业发展"的定义本身是否需要被重写？</p>
+  </div>
+
+  <!-- 周五深度研究 -->
+  <div class="deep-section">
+    <div class="deep-badge">🔬 本周深度研究</div>
+    <h2>UMG 联合三大出版商起诉 Anthropic 索赔30亿美元<br>——史上最大非集体诉讼音乐版权案，将重写 AI 训练数据规则</h2>
+    <div class="deep-sub">Music Business Worldwide · 2026年1月28日立案 | 目前正在审理中</div>
+
+    <div class="deep-block">
+      <h4>🎯 核心结论</h4>
+      <p>这不只是一场版权官司，而是<strong style="color:#ffd700">音乐行业对 AI 公司"先训练、后道歉"模式的全面反击</strong>。UMG、Concord、ABKCO 联合起诉 Anthropic，索赔30亿美元、涉及歌曲超2万首——规模是2023年首次诉讼的40倍。更关键的是，原告已掌握 Anthropic 内部知情并主动下载盗版数据的直接证据。如果此案胜诉，AI 公司为训练数据支付版权费将从"道德讨论"变为"法律义务"，整个行业的成本结构将被重塑。</p>
+    </div>
+
+    <div class="deep-block">
+      <h4>① 历史演进：从单点起诉到全面围剿</h4>
+      <div class="deep-timeline">
+        <div class="tl-item">
+          <div class="tl-date">2023年10月</div>
+          <div class="tl-text">UMG 等联合首次起诉 Anthropic，涉及约500首歌曲，索赔7500万美元。被外界视为试探性行动。</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2024年6月</div>
+          <div class="tl-text">三大唱片公司（UMG/Sony/Warner）联合起诉 Suno、Udio 等 AI 音乐生成器，诉讼战线从"训练数据"扩展到"生成内容"。</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025年7月</div>
+          <div class="tl-text">法官在另案（Bartz v. Anthropic）中披露关键证据：Anthropic 联创 Benjamin Mann 通过 BitTorrent 从 LibGen 非法下载约500万份版权内容，内部邮件显示 Dario Amodei 知情授权，公司将 LibGen 标注为"sketchy（可疑的）"但仍继续使用。</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025年10月</div>
+          <div class="tl-text">法官驳回 Anthropic 撤诉申请，认定出版商充分证明"实际知晓侵权"，案件进入实质审理阶段。</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2026年1月</div>
+          <div class="tl-text">Anthropic 在别案中向作者集体和解，支付15亿美元。同月28日，UMG 等三方提起本案（UMG v. Anthropic II），索赔30亿美元、涉及2万首歌曲，规模提升40倍。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="deep-block">
+      <h4>② 当前格局：授权谈判与诉讼双轨并行</h4>
+      <ul>
+        <li><strong style="color:#ffd700">UMG：</strong>诉讼+授权双线推进。已与 Udio、KLAY 等部分 AI 公司达成许可协议，同时对不合规者保持诉讼压力。</li>
+        <li><strong style="color:#ffd700">Sony Music：</strong>开发出"AI 音乐溯源技术"，可量化 AI 生成音乐中各原版艺人的贡献占比（如"使用了30%的披头士+10%的皇后乐队"），为版权主张提供技术工具，授权谈判筹码显著增强。</li>
+        <li><strong style="color:#ffd700">Warner Music：</strong>已与 Suno 和解，要求用授权目录替换训练数据，免费用户失去下载功能作为和解条件。</li>
+        <li><strong style="color:#ffd700">AI 公司应对：</strong>主流策略分化为两类——OpenAI/谷歌积极与版权方谈判授权；Anthropic/Meta 倾向于法律抗辩（"合理使用"）。前者成本更高但商业合规性更强。</li>
+      </ul>
+    </div>
+
+    <div class="deep-questions">
+      <h4>❓ TME 应该关注的三个关键问题</h4>
+      <div class="deep-q-item">
+        <div class="q-num">Q1 · TME Studio 的训练数据合规性在哪里？</div>
+        <p>TME Studio 已有1000万用户，AI 音乐创作功能持续扩展。此案最重要的判例意义在于：AI 公司"知情并使用未授权数据"将面临巨额赔偿。TME 的 AI 音乐模型使用了哪些训练数据？是否经过版权方授权？现在是自查并建立合规记录的最好时机，而不是等监管来问。</p>
+      </div>
+      <div class="deep-q-item">
+        <div class="q-num">Q2 · "AI 版权合规"能否成为 TME 的差异化竞争优势？</div>
+        <p>当 AI 音乐行业的版权风险越来越大，率先建立合规体系的平台反而能获得艺人和出版方的信任。Sony 的"AI 溯源技术"是个好例子——把版权合规做成产品能力，而不是法务成本。TME 有丰富的版权资源，是否可以把"合规 AI 音乐"作为品牌差异化方向？</p>
+      </div>
+      <div class="deep-q-item">
+        <div class="q-num">Q3 · HRD 在版权合规中的角色是什么？</div>
+        <p>这场版权战的核心教训之一是：Anthropic 内部员工明知数据来源存疑，仍在高管授权下继续使用。这是一个组织文化和合规意识的问题，不只是法务问题。TME 的 HRD 可以通过培训、制度设计，让员工建立"AI 工具使用的版权边界意识"——这比事后处理违规代价小得多。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    在线版：<a href="https://daisyzhu-ai.github.io/ai-daily-news/2026-04-03.html" target="_blank">https://daisyzhu-ai.github.io/ai-daily-news/2026-04-03.html</a><br>
+    <a href="index.html">← 返回目录</a> ｜ WorkBuddy · 每日为你精选
+  </div>
+
+</div>
+
+<a class="back-btn" href="index.html">← 返回目录</a>
+
+</body>
+</html>
