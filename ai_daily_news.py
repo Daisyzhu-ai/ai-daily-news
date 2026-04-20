@@ -684,6 +684,16 @@ def build_weekly_system_prompt(profile: str) -> str:
 - strategic action-box：#f0fff4 底色，绿色边框
 - tactical action-box：#f0f4ff 底色，蓝色边框
 
+## 信息源链接规范（必须严格遵守）
+每条新闻卡片的 `.news-meta` 必须包含可点击的来源链接，格式如下：
+```html
+<div class="news-meta">来源：<a href="https://实际文章URL" target="_blank">媒体名称</a> · 日期</div>
+```
+- 链接必须是真实可访问的文章 URL，不得使用域名首页（如 https://36kr.com/ 这种纯首页链接不可用）
+- 如果搜索素材中有具体 URL，优先使用；若无具体 URL，使用该媒体的搜索页或频道页（如 https://36kr.com/search/articles/AI）
+- 禁止使用无效链接或 javascript:void(0)
+- 每条新闻至少 1 个来源链接，可多个
+
 ## 去重与质量要求
 - 严格执行用户提供的"已报道话题"列表，相关话题不再展开
 - 每条新闻 80-150 字，信息密度高
