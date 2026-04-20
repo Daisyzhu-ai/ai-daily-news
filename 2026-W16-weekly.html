@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 周报 · 第16周 · 2026年4月14日—4月18日</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
+
+  /* ── 报头 ── */
+  .header { background: linear-gradient(135deg, #0d1b2a 0%, #1b2838 50%, #16324f 100%); padding: 44px 24px 36px; text-align: center; }
+  .header-badge { display: inline-block; background: rgba(255,255,255,0.13); color: #fff; font-size: 12px; padding: 4px 16px; border-radius: 20px; margin-bottom: 14px; letter-spacing: 2px; }
+  .header h1 { color: #fff; font-size: 27px; font-weight: 700; margin-bottom: 6px; }
+  .header .period { color: rgba(255,255,255,0.5); font-size: 13px; margin-bottom: 18px; }
+  .header .keyword-block { display: inline-block; background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.35); border-radius: 8px; padding: 10px 20px; margin-bottom: 18px; }
+  .header .keyword-label { color: rgba(255,255,255,0.5); font-size: 11px; letter-spacing: 2px; margin-bottom: 4px; }
+  .header .keyword { color: #ffd700; font-size: 28px; font-weight: 800; letter-spacing: 4px; }
+  .header .lead { color: rgba(255,255,255,0.88); font-size: 14px; margin-top: 4px; background: rgba(255,255,255,0.07); border-left: 3px solid #e94560; padding: 12px 16px; border-radius: 0 8px 8px 0; text-align: left; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.8; }
+
+  /* ── Stats Bar ── */
+  .stats-bar { background: #fff; display: flex; justify-content: center; gap: 48px; padding: 20px; border-bottom: 1px solid #e5e5e5; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-num { font-size: 24px; font-weight: 700; color: #e94560; }
+  .stat-label { font-size: 12px; color: #888; margin-top: 3px; }
+
+  /* ── 布局 ── */
+  .container { max-width: 800px; margin: 0 auto; padding: 28px 16px; }
+  .section-title { font-size: 12px; font-weight: 700; color: #e94560; letter-spacing: 2px; margin: 36px 0 16px; padding-left: 10px; border-left: 3px solid #e94560; text-transform: uppercase; }
+  .track-label { font-size: 13px; font-weight: 700; color: #555; margin: 24px 0 10px; padding: 6px 12px; background: #f0f0f0; border-radius: 6px; display: inline-block; }
+
+  /* ── 新闻卡片 ── */
+  .news-card { background: #fff; border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .news-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.1); }
+  .news-tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; font-weight: 600; }
+  .tag-model   { background: #f0f4ff; color: #3a6bd4; }
+  .tag-org     { background: #f0fff4; color: #2a9d60; }
+  .tag-music   { background: #fff0f3; color: #e94560; }
+  .tag-legal   { background: #fff8e6; color: #d48f2a; }
+  .tag-china   { background: #f0fff8; color: #0a7c4e; }
+  .tag-agent   { background: #f5f0ff; color: #7c3aed; }
+  .tag-intl    { background: #e8f4ff; color: #0070c9; }
+  .tag-talent  { background: #fff4e6; color: #c05a00; }
+  .news-card h3 { font-size: 15px; font-weight: 700; line-height: 1.6; margin-bottom: 8px; color: #1d1d1f; }
+  .news-card p  { font-size: 13px; line-height: 1.85; color: #555; }
+  .news-meta    { font-size: 12px; color: #bbb; margin-top: 8px; }
+
+  /* ── 高亮框 ── */
+  .highlight-box { background: #fffbf0; border: 1px solid #ffd700; border-radius: 10px; padding: 14px 18px; margin: 10px 0; }
+  .highlight-box p { font-size: 13px; line-height: 1.85; color: #555; }
+  .highlight-box strong { color: #b8860b; }
+
+  /* ── HR叙事线 ── */
+  .narrative-box { background: linear-gradient(135deg, #0d1b2a, #16324f); border-radius: 14px; padding: 26px 28px; margin-bottom: 16px; color: #fff; }
+  .narrative-box .n-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 2px; margin-bottom: 10px; }
+  .narrative-box h3 { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: #ffd700; line-height: 1.5; }
+  .narrative-box p { font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.82); margin-bottom: 10px; }
+  .narrative-box .highlight { color: #ffd700; font-weight: 600; }
+
+  /* ── 思考延展 ── */
+  .think-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); border-radius: 12px; padding: 22px 24px; margin-bottom: 12px; color: #fff; }
+  .think-box .think-label { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 2px; margin-bottom: 10px; }
+  .think-box h3 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #fff; }
+  .think-box p { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.8); }
+  .think-box .highlight { color: #ffd700; font-weight: 600; }
+
+  /* ── 行动建议 ── */
+  .action-box { border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; }
+  .action-box.strategic { background: #f0fff4; border: 1px solid #b7e4c7; }
+  .action-box.tactical  { background: #f0f4ff; border: 1px solid #b3c8f4; }
+  .action-box .a-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+  .action-box.strategic .a-label { color: #2a9d60; }
+  .action-box.tactical  .a-label { color: #3a6bd4; }
+  .action-box h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #1d1d1f; }
+  .action-box p { font-size: 13px; line-height: 1.85; color: #555; }
+
+  /* ── 每周一问 ── */
+  .question-box { background: linear-gradient(135deg, #e94560, #c0392b); border-radius: 12px; padding: 22px 24px; color: #fff; margin-top: 8px; }
+  .question-box .q-label { font-size: 11px; letter-spacing: 2px; opacity: 0.75; margin-bottom: 8px; }
+  .question-box p { font-size: 14px; line-height: 1.75; font-weight: 500; }
+
+  /* ── Footer ── */
+  .footer { text-align: center; padding: 32px 16px; color: #bbb; font-size: 12px; line-height: 2.2; }
+  .footer a { color: #3a6bd4; text-decoration: none; }
+  .back-btn { position: fixed; bottom: 24px; right: 24px; background: #e94560; color: #fff; font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 24px; text-decoration: none; box-shadow: 0 4px 12px rgba(233,69,96,0.4); z-index: 999; }
+  .back-btn:hover { opacity: 0.9; }
+
+  /* ── 分隔线 ── */
+  .divider { height: 1px; background: #e5e5e5; margin: 28px 0; }
+</style>
+</head>
+<body>
+
+<!-- ══ 报头 ══ -->
+<div class="header">
+  <div class="header-badge">WorkBuddy · AI 周报 · 2026 W16</div>
+  <h1>AI 周报 · 第十六周</h1>
+  <div class="period">2026年4月14日（周一）— 4月18日（周五）</div>
+  <div class="keyword-block">
+    <div class="keyword-label">本周关键词</div>
+    <div class="keyword">「替代」</div>
+  </div>
+  <div class="lead">
+    本周的主旋律只有两个字——<strong style="color:#ffd700">替代</strong>。GPT-6 发布、Meta 宣布年内裁员超 1.5 万人、Snap 裁员 16%、全球科技裁员近 8 万人中有 47.9% 明确归因于 AI。AI 替代不再是预言，而是财报会上的正式叙事。与此同时，娱乐行业的版权博弈从对抗走向授权合作，Apple Music 推出 AI 透明度标签，环球音乐与 Udio 达成和解合作——<strong style="color:#ffd700">替代的边界，正在被产业规则重新划定。</strong>
+  </div>
+</div>
+
+<!-- ══ Stats Bar ══ -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">78,557</div>
+    <div class="stat-label">Q1全球科技业裁员人数</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">47.9%</div>
+    <div class="stat-label">裁员中直接归因于AI的比例</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">5~6万亿</div>
+    <div class="stat-label">GPT-6 参数规模（MoE架构）</div>
+  </div>
+</div>
+
+<!-- ══ 主体内容 ══ -->
+<div class="container">
+
+  <!-- ── 速览：三轨 ── -->
+  <div class="section-title">本周速览 · 三轨精华</div>
+
+  <!-- 轨道一：大模型进展 -->
+  <div class="track-label">🧠 大模型进展</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-model">旗舰发布</span>
+    <h3>GPT-6 发布，代号"Spud"，被定位为 AGI 最后一公里</h3>
+    <p>OpenAI 正式发布 GPT-6（内部代号"土豆"），原生世界模型架构，具备物理引擎能力，逻辑推理进入人类前 1%，200 万 Token 超长上下文，参数规模达 5~6 万亿（MoE 架构）。性能较 GPT-5.4 提升约 40%，训练耗资超 20 亿美元，动用约 10 万张 H100。OpenAI 内部将其定位为"AGI 的最后一公里"。</p>
+    <div class="highlight-box">
+      <p><strong>核心信号：</strong>GPT-6 的发布让"最强模型"称号首次在同一周内出现两个竞争者——同日 Anthropic 发布 Claude Opus 4.7，编程能力提升 13%，并推出企业级 Claude Design 产品线。<strong>旗舰模型的发布节奏已经压缩到以周计算。</strong></p>
+    </div>
+    <div class="news-meta">来源：新浪科技 / 腾讯新闻 · 2026年4月14日</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-china">国产算力</span>
+    <h3>DeepSeek V4 预计 4 月下旬发布，全栈弃英伟达、全面迁移华为昇腾</h3>
+    <p>DeepSeek V4 将成为全球首个完全脱离英伟达 CUDA 生态的顶级大模型，全栈迁移至华为昇腾 CANN 框架。完整版超万亿参数，轻量版约 2000 亿参数。阿里、腾讯、字节已预订数十万片国产芯片，带动算力产业链价格跳涨 20%。</p>
+    <div class="news-meta">来源：凤凰网科技 / 东方财富 · 2026年4月19日</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-china">空间智能</span>
+    <h3>腾讯、阿里同日发布世界模型，3D 空间智能成新战场</h3>
+    <p>腾讯正式发布并开源混元 3D 世界模型 2.0（HY-World2.0），支持文字/图片/视频多模态输入，自动生成 3D 世界，可与 Unity、UE 无缝对接。阿里同日发布 HappyOyster 世界模型，支持实时虚拟世界交互。此前，阿里 HappyHorse-1.0 视频模型已空降 AAVA 全球评测双榜第一。</p>
+    <div class="news-meta">来源：i黑马 / 搜狐科技 · 2026年4月16日</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-agent">具身智能</span>
+    <h3>字节 Seeduplex 全双工语音落地豆包；智元机器人发布 4 款本体 + 4 个大模型</h3>
+    <p>字节跳动推出原生全双工语音大模型 Seeduplex，已在豆包 App 全量上线，大规模 A/B 测试显示通话满意度提升 8.34%，误打断率下降 50%。同周，智元机器人在上海举办 2026 合作伙伴大会，发布 4 款本体新品、4 个 AI 大模型、7 个解决方案，2500 位来自 34 国的伙伴参会，具身智能商业化加速。</p>
+    <div class="news-meta">来源：IT之家 / 每经AI快讯 · 2026年4月9—17日</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 轨道二：组织动态 -->
+  <div class="track-label">🏢 硅谷 & AI-Native 组织动态</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">裁员潮</span>
+    <h3>Meta 宣布年内裁员超 1.5 万人，Snap 裁员 16%，"AI 重塑劳动力"成财报标准叙事</h3>
+    <p>Meta 宣布 5 月 20 日启动首轮裁员约 8000 人（全球员工 10%），全年目标裁减 20%（超 1.5 万人）；Snap 同周裁减约 1000 人（16%），关闭 300+ 空缺职位，裁员消息发布后盘前股价反涨超 10%。Block（前 Square）裁减 40% 员工，CFO 透露大批企业高管主动联系"复制这套剧本"。共同叙事口径：AI 驱动效率重组。</p>
+    <div class="highlight-box">
+      <p><strong>数据参照：</strong>Q1 全球科技裁员 78,557 人，其中 47.9%（约 3.76 万人）直接归因于 AI 实施与自动化——这是 2023 年以来最严峻的一次，且<strong>裁员理由已从"降本"升级为"AI 战略重组"</strong>，话语体系已然转变。</p>
+    </div>
+    <div class="news-meta">来源：路透社 / IT之家 / Nikkei Asia · 2026年4月15—17日</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-talent">人才争夺</span>
+    <h3>腾讯挖角原 OpenAI 研究员姚顺雨任首席 AI 科学家，AI Lab 悄然解散</h3>
+    <p>腾讯将 27 岁的原 OpenAI 研究员姚顺雨招至 CEO 办公室，主导混元大模型开发；伴随此举，成立十年的腾讯 AI Lab 悄然解散，研究能力并入大模型体系。同期，字节跳动疑似以近亿元年薪招募前 DeepSeek 95 后研究员郭达雅（字节官方辟谣，但薪酬讨论持续发酵）。</p>
+    <div class="news-meta">来源：新浪新闻 / 晚点LatePost · 2026年4月16日</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-org">人才结构</span>
+    <h3>中国大厂 AI 团队博士比例下降，工程实践与业务落地成新核心竞争力</h3>
+    <p>据晚点 LatePost，字节、阿里、腾讯研究团队博士比例相较上一轮 AI 高峰明显下降，竞争焦点从学术研究转向工程实践和业务层面；各大厂正组建"博士军团与实战工程师混编团队"，人才争夺从顶尖科学家全面延伸至高级工程师群体。</p>
+    <div class="news-meta">来源：晚点LatePost · 2026年4月8日</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-intl">资本动态</span>
+    <h3>OpenAI 完成 1220 亿美元融资，投后估值 8520 亿，刷新私募融资纪录</h3>
+    <p>OpenAI 完成由亚马逊（500 亿美元）、英伟达、软银领衔的 1220 亿美元私募融资，投后估值 8520 亿美元；月度收入约 20 亿美元，企业级占比 40%。同期，Musk 与 OpenAI 诉讼案定于 4 月 27 日联邦法院开庭，马斯克开庭前两周放弃天价赔偿要求，核心争议仍是非营利承诺与商业化路径的法律认定。</p>
+    <div class="news-meta">来源：多家科技媒体综合 · 2026年3月底—4月</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 轨道三：娱乐&版权 -->
+  <div class="track-label">🎵 娱乐行业 AI 应用 & 版权</div>
+
+  <div class="news-card">
+    <span class="news-tag tag-legal">版权授权</span>
+    <h3>环球音乐 × Udio 和解合作：行业首创 AI 授权平台将于 2026 年正式上线</h3>
+    <p>环球音乐集团（UMG）与 AI 音乐平台 Udio 于 2025 年 10 月达成战略合作协议（结束版权侵权诉讼），合作平台 2026 年正式上线，由经授权音乐训练的 AI 技术驱动，为艺术家和词曲作者提供订阅制收入机制。同期，网易云音乐与 UMG 达成多年期授权协议，明确 AI 生成内容版权处理边界，是国内首例。</p>
+    <div class="highlight-box">
+      <p><strong>范式转变：</strong>AI 音乐版权的主流模式正从"起诉+封禁"转向<strong>"授权+分成"</strong>，行业格局加速重组，拥有版权资产的公司话语权正在上升。</p>
+    </div>
+    <div class="news-meta">来源：腾讯新闻 / 新浪新闻 · 2026年持续</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-music">平台工具</span>
+    <h3>Apple Music 上线 AI 透明度标签；YouTube 推出 "Music assistant" 自动生成背景音乐</h3>
+    <p>Apple Music 推出全球首个系统性 AI 内容标注机制，覆盖专辑封面、音频录制、歌词、MV 四类场景，新内容提交强制披露 AI 参与情况。YouTube 同期推出"Music assistant"工具，创作者输入文字提示即可让 AI 自动生成背景音乐，目前面向 Creator Music beta 用户开放。</p>
+    <div class="news-meta">来源：搜狐科技 / 网易订阅 · 2026年3月—4月</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-music">肖像权</span>
+    <h3>龚俊、易烊千玺等多位艺人工作室联合维权：AI 换脸短剧侵权进入集体诉讼阶段</h3>
+    <p>本周多位顶流艺人工作室接连发布严正声明，矛头指向 AI 换脸短剧平台未经授权使用艺人肖像；中国广播电视社会组织联合会演员委员会同步表态，明确禁止未授权采集、使用、合成艺人形象及声纹。法律诉讼赔偿金额常低于违法所得，执行层面缺口明显，成为行业待解难题。</p>
+    <div class="news-meta">来源：腾讯新闻 · 2026年4月</div>
+  </div>
+
+  <div class="news-card">
+    <span class="news-tag tag-music">AI音乐创作</span>
+    <h3>MiniMax Music 2.6 发布：国风细节达到"呼吸感"，首批开放 AI Agent 生态插件</h3>
+    <p>MiniMax 发布新一代 AI 音乐生成模型 Music 2.6，首包延迟降至 20 秒内，国风方向精准模拟二胡颤音、笛子呼吸停顿、古筝扫弦等细节；同步推出 Cover 创作功能及面向 AI Agent 生态的 Music Skill，开源 3 个 Agent 生态插件，全球创作者开启 14 天免费内测。</p>
+    <div class="news-meta">来源：IT之家 / 腾讯新闻 · 2026年4月10日</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ── HR 叙事线 ── -->
+  <div class="section-title">本周 HR 叙事线</div>
+
+  <div class="narrative-box">
+    <div class="n-label">本周主题</div>
+    <h3>当"AI 替代"成为财报的正式叙事，HR 还能用什么话语体系与员工对话？</h3>
+    <p>本周最大的话语权变化，不是某家公司又裁了多少人，而是 <span class="highlight">裁员理由的措辞变了</span>。Block 的 CFO 公开说"宁可早一步"，Snap 的裁员消息让股价涨了 10%，Meta 把"AI 重塑劳动力"写进财报措辞——这意味着"AI 可能替代部分岗位"已经从 HR 内部的敏感议题，变成了资本市场的正向信号。</p>
+    <p>这对 TME 这样的内容科技公司意味着什么？过去我们在做 AI 培训时，潜台词是"用 AI 让自己更有价值"；现在外部环境给了一个更直白的语境：<span class="highlight">那些没有用起来 AI 的人，正在成为成本项</span>。这不是恐吓，而是一个叙事工具——HR 有没有能力把这个外部信号转化成内部的学习动能，而不是焦虑源？</p>
+    <p>同时，腾讯 AI Lab 解散、大厂博士比例下降、工程实践成为核心竞争力——这些组织动态在告诉我们：<span class="highlight">AI 时代最稀缺的不是理论研究者，而是能把 AI 落入业务的实战型人才</span>。这与 Daisy 正在推进的 AI-Ready 三阶段（干部认知拉齐 → 员工工具用会 → AI 创新落入业务）高度契合。</p>
+  </div>
+
+  <!-- ── 思考延展 ── -->
+  <div class="section-title">思考延展</div>
+
+  <div class="think-box">
+    <div class="think-label">延展 01</div>
+    <h3>"AI 替代"话语权转移后，HR 需要重建什么？</h3>
+    <p>当"AI 替代"从内部敏感话题变成外部公开叙事，HR 原有的"安抚性话语体系"（"AI 是工具，不会取代人"）已经失效。对 Daisy 的启发在于：<span class="highlight">TME 的 AI-Ready 培训需要直面替代，而不是绕开它。</span>可以考虑在干部培训中引入"哪些岗位正在被 AI 重构"的结构性讨论，把外部数据（Q1 裁员 47.9% 归因 AI）转化为内部行动的触发器，而非等待焦虑自然蔓延。</p>
+  </div>
+
+  <div class="think-box">
+    <div class="think-label">延展 02</div>
+    <h3>版权博弈从对抗到授权：内容生态重构与 TME 的机会窗口</h3>
+    <p>环球音乐与 Udio 的和解、Apple Music 的 AI 透明度标签、网易云音乐的 AI 授权条款——这一系列动向表明，音乐行业的 AI 秩序正在从"野蛮生长+起诉"走向"授权框架+分成模型"。对 Daisy 的启发在于：<span class="highlight">TME 作为版权资产持有方，未来的 AI 音乐培训可以从"工具使用"延伸到"版权意识建设"——让音乐人和产品团队都理解 AI 内容的法律边界，是 TME 学堂差异化价值的潜在方向。</span>这不只是合规课，而是业务赋能课。</p>
+  </div>
+
+  <!-- ── HR 行动建议 ── -->
+  <div class="section-title">HR 行动建议</div>
+
+  <div class="action-box strategic">
+    <div class="a-label">战略层 · 面向 HR 负责人</div>
+    <h4>启动"AI 岗位影响盘点"，将外部替代数据转化为内部学习动能</h4>
+    <p>本周外部数据（Q1 全球 47.9% 裁员归因 AI）已提供足够的叙事弹药。建议 Daisy 推动 HR 团队与各 BU 负责人联合开展一次轻量级"AI 岗位影响盘点"——不是为了制造恐慌，而是把"哪些工作流正在被 AI 渗透"讲清楚，让 AI-Ready 三阶段培训有清晰的业务锚点，也让小 A 看到 L&D 在 AI 转型中的组织战略价值。</p>
+  </div>
+
+  <div class="action-box tactical">
+    <div class="a-label">操作层 · 面向培训经理</div>
+    <h4>本周可做：用外部裁员数据设计一道"AI 自测题"，嵌入下次 AI 培训开场</h4>
+    <p>具体动作：选取 1~2 条本周真实数据（如"Snap 裁员 16%，股价反涨 10%"），在下次 AI 培训或团队例会开场设计一道开放题，例如："如果你是 Snap 的 HRBP，你会在通知裁员前做什么？"——把外部事件转化为情境学习素材，激活学员的真实代入感，比任何理论导入都更能打开对话。素材现成，开发成本极低，效果立竿见影。</p>
+  </div>
+
+  <!-- ── 每周一问 ── -->
+  <div class="section-title">每周一问</div>
+
+  <div class="question-box">
+    <div class="q-label">WEEKLY QUESTION</div>
+    <p>当"AI 替代"成为资本市场的正向叙事，而你的员工还没有真正用起 AI——作为培训经理，你是先解决"用起来"的问题，还是先解决"愿意面对替代"的问题？两者真的可以同步推进吗？</p>
+  </div>
+
+</div>
+
+<!-- ══ Footer ══ -->
+<div class="footer">
+  WorkBuddy · AI 周报 第十六周 · 2026年4月14日—4月18日<br>
+  <a href="https://daisyzhu-ai.github.io/ai-daily-news/2026-W16-weekly.html">在线版</a> ·
+  <a href="index.html">返回目录</a><br>
+  内容由 DeepSeek + WorkBuddy 整理生成，供内部参考
+</div>
+
+<a class="back-btn" href="index.html">← 返回目录</a>
+
+</body>
+</html>
