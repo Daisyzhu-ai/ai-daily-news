@@ -12,7 +12,16 @@ import os
 import re
 import subprocess
 import sys
+import warnings
 from datetime import datetime
+
+# 抑制 LibreSSL / urllib3 警告，避免 stderr 日志被刷屏
+warnings.filterwarnings("ignore", category=UserWarning, module="urllib3")
+try:
+    from urllib3.exceptions import NotOpenSSLWarning
+    warnings.filterwarnings("ignore", category=NotOpenSSLWarning)
+except ImportError:
+    pass
 
 import requests
 
@@ -446,9 +455,11 @@ def main():
     date_str = datetime.now().strftime("%Y-%m-%d")
     out_path = os.path.join(BASE_DIR, f"{date_str}.html")
 
-    # 已存在则跳过（避免重复跑）
+    # 已存在则跳过日报生成（但周一仍需触发周报）
     if os.path.exists(out_path):
         print(f"ℹ️  今日日报已存在，跳过生成：{out_path}", flush=True)
+        if weekday == 0:
+            run_weekly()
         return
 
     # 1. 读取 profile
@@ -462,7 +473,7 @@ def main():
     # 3. 生成 HTML
     if not DEEPSEEK_API_KEY:
         print("❌ 未配置 deepseek_api_key，退出", flush=True)
-        sys.exit(1)
+        return  # 不用 sys.exit(1)，避免非零退出码导致 launchd 停止调度
 
     try:
         html = generate_html(news_raw, profile)
@@ -473,7 +484,10 @@ def main():
             f.write(news_raw)
         print(f"❌ 日报生成失败：{e}", flush=True)
         print(f"📝 原始新闻素材已保存至：{fail_path}，可事后手动生成", flush=True)
-        sys.exit(1)
+        # 即使日报失败，周一仍尝试生成周报
+        if weekday == 0:
+            run_weekly()
+        return  # 不用 sys.exit(1)，避免 launchd 停止调度
 
     # 4. 保存文件
     with open(out_path, "w", encoding="utf-8") as f:
@@ -880,7 +894,7 @@ def run_weekly():
     # 4. 生成 HTML
     if not DEEPSEEK_API_KEY:
         print("❌ 未配置 deepseek_api_key，退出", flush=True)
-        sys.exit(1)
+        return  # 不用 sys.exit(1)，避免 launchd 停止调度
 
     try:
         html = generate_weekly_html(news_raw, profile, week_str,
@@ -891,7 +905,7 @@ def run_weekly():
             f.write(news_raw)
         print(f"❌ 周报生成失败：{e}", flush=True)
         print(f"📝 原始素材已保存至：{fail_path}", flush=True)
-        sys.exit(1)
+        return  # 不用 sys.exit(1)，避免 launchd 停止调度
 
     # 5. 保存文件
     with open(out_path, "w", encoding="utf-8") as f:
